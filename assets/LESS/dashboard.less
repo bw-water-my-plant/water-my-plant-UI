@@ -1,0 +1,125 @@
+@import 'reset.less';
+@import 'variables.less';
+@import 'navigation.less';
+
+* {
+    border: 1px hotpink dashed;
+}
+
+header {
+    width: 100%;
+    height: 10rem;
+    border: 1px black dotted;
+    background-color: @green2;
+    background-image: url("../assets/site-images/tree-tile-small3.gif");
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-position-y: 2rem;
+}
+
+
+.main-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    padding: 3rem 5rem 0 3rem;
+
+    .garden-buttons {
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 10rem;
+        border: blue 1px solid;
+
+        .button-container {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 0 2rem 4rem 2rem;
+            background-color: @green2;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 1rem;
+        }
+    }
+
+    .garden-content {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        justify-content: flex-start;
+
+        .garden-search-add {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 100%;
+            border: @green2;
+            margin-left: 4rem;
+        }
+
+        .fa-search {
+            position: relative;
+            left: 2rem;
+            color: rgb(129, 199, 161);
+        }
+
+        form input{
+            width: 25rem;
+            text-indent: 2.5rem;
+            height: 2rem;
+            border-radius: .5rem;
+            color: rgb(129, 199, 161);
+            
+            
+        }
+        ::placeholder {
+            color: rgb(129, 199, 161);
+            opacity: 1; /* Firefox */
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+
+        .garden-cards {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            width: 100%;
+            padding: 2rem;
+            color: white;
+
+            .plant-card {
+                border: 1px violet dotted;
+                background-color: rgb(146, 146, 146);
+                padding: 1rem;
+                border-radius: 1rem;
+                margin: 1rem;
+                width: 40%;
+                max-width: 20rem;   
+                height: 10rem; 
+            }
+
+            .plant-card:first-child {
+                background-image: url('../assets/plant-images/plant-card-3.jpg') ;
+                background-size: 20rem;
+                background-blend-mode: multiply;
+                background-repeat: no-repeat;
+                background-position: fixed;
+            }
+        }
+
+    }
+}
+
+
+// .plant-card .bg-overlay {
+            //     background-color: black;
+            //     width: 100%;
+            //     height: 20rem;
+            //     margin-top: -3rem;
+            //     opacity: .3;
+            //     background-blend-mode: multiply;
+            //     position: relative;
+            //     border-radius: 1rem;
+            //     position: absolute;
+            // }
