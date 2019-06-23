@@ -138,7 +138,6 @@ table {
   display: flex;
   justify-content: space-between;
   background-color: #1a8654;
-  color: cyan;
   height: 5rem;
 }
 .navbar .logo-container {
@@ -146,12 +145,18 @@ table {
   width: 200px;
   margin: 0;
 }
+.navbar .nav-links {
+  width: 30rem;
+}
 .navbar ul {
   display: flex;
 }
+.navbar ul li {
+  margin: 2rem 1rem;
+}
 a {
   text-decoration: none;
-  color: cyan;
+  color: white;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
 * {
