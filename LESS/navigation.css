@@ -2,8 +2,12 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #1a8654;
-  height: 5rem;
+  background-color: #0d3b26;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 0 5px #0d3b26;
 }
 .navbar .logo-container {
   display: flex;
@@ -11,13 +15,13 @@
   margin: 0;
 }
 .navbar .nav-links {
-  width: 30rem;
+  width: 20rem;
 }
 .navbar ul {
   display: flex;
 }
 .navbar ul li {
-  margin: 2rem 1rem;
+  margin-left: 1rem;
 }
 a {
   text-decoration: none;

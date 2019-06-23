@@ -1,3 +1,4 @@
+/*-----------------------------------------------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -133,12 +134,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*-----------------------------------------------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #1a8654;
-  height: 5rem;
+  background-color: #0d3b26;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 0 5px #0d3b26;
+  border: 10px blue dashed;
 }
 .navbar .logo-container {
   display: flex;
@@ -146,31 +151,30 @@ table {
   margin: 0;
 }
 .navbar .nav-links {
-  width: 30rem;
+  width: 20rem;
 }
 .navbar ul {
   display: flex;
 }
 .navbar ul li {
-  margin: 2rem 1rem;
+  margin-left: 1rem;
 }
 a {
   text-decoration: none;
   color: white;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
-* {
-  border: 1px hotpink dashed;
-}
 header {
   width: 100%;
   height: 10rem;
-  border: 1px black dotted;
+  border-color: black;
+  border-style: dotted;
   background-color: #1a8654;
   background-image: url("../images/site-images/tree-tile-small3.gif");
   background-attachment: fixed;
   background-repeat: repeat-x;
-  background-position-y: 2rem;
+  background-position-y: 3rem;
+  background-size: 100rem;
 }
 .main-container {
   display: flex;
@@ -182,7 +186,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   width: 10rem;
-  border: blue 1px solid;
+  border: red 1px solid;
 }
 .main-container .garden-buttons .button-container {
   display: flex;
@@ -219,6 +223,8 @@ header {
   height: 2rem;
   border-radius: .5rem;
   color: #81c7a1;
+  border: 1px solid #81c7a1;
+  box-shadow: 0 0 5px blue;
 }
 .main-container .garden-content ::placeholder {
   color: #81c7a1;
@@ -245,9 +251,16 @@ header {
   max-width: 20rem;
   height: 10rem;
 }
+.main-container .garden-content .garden-cards .card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .main-container .garden-content .garden-cards .plant-card:first-child {
   background-image: url('../images/plant-images/plant-card-3.jpg');
-  background-size: 20rem;
+  background-size: 25rem;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: fixed;

@@ -1,9 +1,16 @@
 @import 'variables.less';
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: @green2;
-    height: 5rem;
+    background-color: @green3;
+    // height: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem;
+    box-shadow: 0 0 5px @green3;
+    // border: 10px blue dashed;
 
     .logo-container {
         display: flex;
@@ -12,14 +19,14 @@
     }
 
     .nav-links {
-        width: 30rem;
+        width: 20rem;
     }
 
     ul {
         display: flex;
         
         li {
-            margin: 2rem 1rem;
+            margin-left: 1rem;
         }
     }
 

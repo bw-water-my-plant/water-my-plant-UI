@@ -1,3 +1,4 @@
+/*-----------------------------------------------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -133,12 +134,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*-----------------------------------------------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #1a8654;
-  height: 5rem;
+  background-color: #0d3b26;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 0 5px #0d3b26;
 }
 .navbar .logo-container {
   display: flex;
@@ -146,21 +150,18 @@ table {
   margin: 0;
 }
 .navbar .nav-links {
-  width: 30rem;
+  width: 20rem;
 }
 .navbar ul {
   display: flex;
 }
 .navbar ul li {
-  margin: 2rem 1rem;
+  margin-left: 1rem;
 }
 a {
   text-decoration: none;
   color: white;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
-}
-* {
-  border: 1px hotpink dashed;
 }
 header {
   width: 100%;
@@ -170,7 +171,8 @@ header {
   background-image: url("../images/site-images/tree-tile-small3.gif");
   background-attachment: fixed;
   background-repeat: repeat-x;
-  background-position-y: 2rem;
+  background-position-y: 3rem;
+  background-size: 10rem;
 }
 .main-container {
   display: flex;
@@ -182,7 +184,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   width: 10rem;
-  border: blue 1px solid;
+  border: red 1px solid;
 }
 .main-container .garden-buttons .button-container {
   display: flex;
@@ -218,7 +220,8 @@ header {
   text-indent: 2.5rem;
   height: 2rem;
   border-radius: 0.5rem;
-  color: #81c7a1;
+  border: 1px solid #81c7a1;
+  box-shadow: 0 0 5px blue;
 }
 .main-container .garden-content ::placeholder {
   color: #81c7a1;
@@ -230,25 +233,70 @@ header {
 .main-container .garden-content .garden-cards {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 100%;
   padding: 2rem;
   color: white;
 }
 .main-container .garden-content .garden-cards .plant-card {
   border: 1px violet dotted;
-  background-color: #929292;
+  background-color: #7e7e7e;
   padding: 1rem;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   width: 40%;
   max-width: 20rem;
-  height: 10rem;
-}
-.main-container .garden-content .garden-cards .plant-card:first-child {
-  background-image: url('../images/plant-images/plant-card-3.jpg');
-  background-size: 20rem;
+  min-width: 18rem;
+  min-height: 10rem;
+  max-height: 14rem;
+  background-size: 25rem;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: fixed;
+}
+.main-container .garden-content .garden-cards .card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+.main-container .garden-content .garden-cards h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(1) {
+  background-image: url('../images/plant-images/plant-card-3.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(2) {
+  background-image: url('../images/plant-images/plant-card-1.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(3) {
+  background-image: url('../images/plant-images/plant-card-2.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(4) {
+  background-image: url('../images/plant-images/plant-card-4.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(5) {
+  background-image: url('../images/plant-images/plant-card-5.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(6) {
+  background-image: url('../images/plant-images/plant-card-6.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:last-child {
+  background-color: #1a8654;
+}
+.main-container .garden-content .garden-cards .care-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-top: 1rem;
+}
+.main-container .garden-content .garden-cards .care-icons .light {
+  color: #ffdd1f;
+}
+.main-container .garden-content .garden-cards .care-icons .water {
+  color: #35d0ff;
 }
