@@ -26,11 +26,28 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: flex-start;
   margin: 0 2rem 4rem 2rem;
   background-color: #1a8654;
   height: 4rem;
   width: 4rem;
   border-radius: 1rem;
+}
+.main-container .garden-buttons .button-container h5 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.main-container .garden-buttons .button-container .garden-icon {
+  width: 85%;
+  margin-top: .2rem;
+  font-size: 2.3rem;
+  text-align: center;
+}
+.main-container .garden-buttons .button-container .fas {
+  color: #fff;
+}
+.main-container .garden-buttons .button-container .fa-newspaper {
+  margin-top: .9rem;
 }
 .main-container .garden-content {
   display: flex;
@@ -48,16 +65,17 @@ header {
 }
 .main-container .garden-content .fa-search {
   position: relative;
-  left: 2rem;
+  left: -0.7rem;
   color: #81c7a1;
 }
 .main-container .garden-content form input {
   width: 25rem;
   text-indent: 2.5rem;
   height: 2rem;
+  margin-left: -2.75rem;
   border-radius: .5rem;
   border: 1px solid #81c7a1;
-  box-shadow: 0 0 5px blue;
+  box-shadow: 2px 2px 2px lightgrey;
 }
 .main-container .garden-content ::placeholder {
   color: #81c7a1;
@@ -75,7 +93,7 @@ header {
   color: white;
 }
 .main-container .garden-content .garden-cards .plant-card {
-  border: 1px violet dotted;
+  box-shadow: 2px 2px 5px grey;
   background-color: #7e7e7e;
   padding: 1rem;
   border-radius: 1rem;
@@ -89,6 +107,7 @@ header {
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: fixed;
+  cursor: pointer;
 }
 .main-container .garden-content .garden-cards .card-container {
   display: flex;
@@ -103,31 +122,34 @@ header {
   margin-bottom: 1rem;
   font-weight: 600;
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(1) {
-  background-image: url('../images/plant-images/plant-card-3.jpg');
+.main-container .garden-content .garden-cards p {
+  font-weight: 400;
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(2) {
-  background-image: url('../images/plant-images/plant-card-1.jpg');
+.main-container .garden-content .garden-cards .plant-card:first-child {
+  background-color: #1a8654;
 }
 .main-container .garden-content .garden-cards .plant-card:nth-child(3) {
-  background-image: url('../images/plant-images/plant-card-2.jpg');
+  background-image: url('../images/plant-images/plant-card-1.jpg');
 }
 .main-container .garden-content .garden-cards .plant-card:nth-child(4) {
-  background-image: url('../images/plant-images/plant-card-4.jpg');
+  background-image: url('../images/plant-images/plant-card-2.jpg');
 }
 .main-container .garden-content .garden-cards .plant-card:nth-child(5) {
-  background-image: url('../images/plant-images/plant-card-5.jpg');
+  background-image: url('../images/plant-images/plant-card-4.jpg');
 }
 .main-container .garden-content .garden-cards .plant-card:nth-child(6) {
+  background-image: url('../images/plant-images/plant-card-5.jpg');
+}
+.main-container .garden-content .garden-cards .plant-card:nth-child(7) {
   background-image: url('../images/plant-images/plant-card-6.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:last-child {
-  background-color: #1a8654;
+.main-container .garden-content .garden-cards .plant-card:nth-child(2) {
+  background-image: url('../images/plant-images/plant-card-3.jpg');
 }
 .main-container .garden-content .garden-cards .care-icons {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 25%;
   margin-top: 1rem;
 }
 .main-container .garden-content .garden-cards .care-icons .light {

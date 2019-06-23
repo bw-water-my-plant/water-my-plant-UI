@@ -32,11 +32,32 @@ header {
             display: flex;
             flex-flow: column;
             align-items: center;
+            justify-content: flex-start;
             margin: 0 2rem 4rem 2rem;
             background-color: @green2;
             height: 4rem;
             width: 4rem;
             border-radius: 1rem;
+
+            h5 {
+            margin-top: 1rem;
+            font-size: 1rem;
+            }
+
+            .garden-icon {
+            width: 85%;
+            margin-top: .2rem;
+            font-size: 2.3rem;
+            text-align: center;
+            }
+
+            .fas {
+                color: #fff;
+            }
+
+            .fa-newspaper {
+                margin-top: .9rem;
+            }
         }
     }
 
@@ -57,7 +78,7 @@ header {
 
         .fa-search {
             position: relative;
-            left: 2rem;
+            left: -.7rem;
             color: rgb(129, 199, 161);
         }
 
@@ -65,9 +86,10 @@ header {
             width: 25rem;
             text-indent: 2.5rem;
             height: 2rem;
+            margin-left: -2.75rem;
             border-radius: .5rem;
             border: 1px solid rgb(129, 199, 161);
-            box-shadow: 0 0 5px blue;
+            box-shadow: 2px 2px 2px lightgrey;
             
         }
         ::placeholder {
@@ -87,7 +109,8 @@ header {
             color: white;
 
             .plant-card {
-                border: 1px violet dotted;
+                // border: 1px violet dotted;
+                box-shadow: 2px 2px 5px grey;
                 background-color: rgb(126, 126, 126);
                 padding: 1rem;
                 border-radius: 1rem;
@@ -101,6 +124,7 @@ header {
                 background-blend-mode: multiply;
                 background-repeat: no-repeat;
                 background-position: fixed;
+                cursor: pointer;
             }
 
             .card-container {
@@ -118,38 +142,43 @@ header {
                 font-weight: 600;
             }
 
-            .plant-card:nth-child(1) {
-                background-image: url('../images/plant-images/plant-card-3.jpg');
+            p {
+                font-weight: 400;
             }
 
-            .plant-card:nth-child(2) {
-                background-image: url('../images/plant-images/plant-card-1.jpg');
+            .plant-card:first-child {
+                background-color: @green2;
             }
 
             .plant-card:nth-child(3) {
-                background-image: url('../images/plant-images/plant-card-2.jpg');
+                background-image: url('../images/plant-images/plant-card-1.jpg');
             }
 
             .plant-card:nth-child(4) {
-                background-image: url('../images/plant-images/plant-card-4.jpg');
+                background-image: url('../images/plant-images/plant-card-2.jpg');
             }
 
             .plant-card:nth-child(5) {
-                background-image: url('../images/plant-images/plant-card-5.jpg');
+                background-image: url('../images/plant-images/plant-card-4.jpg');
             }
 
             .plant-card:nth-child(6) {
+                background-image: url('../images/plant-images/plant-card-5.jpg');
+            }
+
+            .plant-card:nth-child(7) {
                 background-image: url('../images/plant-images/plant-card-6.jpg');
             }
 
-            .plant-card:last-child {
-                background-color: @green2;
+            .plant-card:nth-child(2) {
+                background-image: url('../images/plant-images/plant-card-3.jpg');
             }
+            
 
             .care-icons {
                 display: flex;
                 justify-content: space-between;
-                width: 20%;
+                width: 25%;
                 margin-top: 1rem;
             }
 
