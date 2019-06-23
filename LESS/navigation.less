@@ -3,22 +3,27 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    background-color: @green3;
-    height: 1.5rem;
+    align-items: center;
+    background-color: @green2;
+    height: auto;
     position: fixed;
     width: 100%;
     z-index: 10;
-    padding: 1.5rem 2rem 2.5rem 2rem;
+    // padding: 1.5rem 2rem 2.5rem 2rem;
     box-shadow: 0 0 5px @green3;
     // border: 10px blue dashed;
     // overflow-x: hidden;
 
     .logo-container {
         display: flex;
-        width: 200px;
-        margin: 0;
+        // width: 200px;
+        margin: .5rem 2rem 1rem 2rem;
         font-size: 2rem;
+        height: 100%;
+
+        img {
+            height: 5rem;
+        }
     }
 
     .nav-links {

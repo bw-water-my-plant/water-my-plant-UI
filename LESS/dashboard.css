@@ -2,9 +2,8 @@
 header {
   width: 100%;
   height: 20rem;
-  border: 1px black dotted;
-  background-color: #1a8654;
-  background-image: url("../images/site-images/tree-tile-small3.gif");
+  background-color: #1ba364;
+  background-image: url("../images/site-images/tree-tile-small4.png");
   background-attachment: fixed;
   background-repeat: repeat-x;
   background-position-y: 5.5rem;
@@ -28,14 +27,16 @@ header {
   align-items: center;
   justify-content: flex-start;
   margin: 0 4rem 8rem 4rem;
-  background-color: #1a8654;
+  background-color: #1ba364;
   height: 6rem;
   width: 6rem;
   border-radius: 1rem;
 }
 .main-container .garden-buttons .button-container h4 {
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  width: 10rem;
+  text-align: center;
 }
 .main-container .garden-buttons .button-container svg {
   margin-top: 1.25rem;
@@ -53,7 +54,8 @@ header {
   margin-top: 1.25rem;
 }
 .main-container .garden-buttons .button-container .fa-question-circle {
-  font-size: 2rem;
+  font-size: 4rem;
+  margin-top: 1rem;
 }
 .main-container .garden-content {
   display: flex;
@@ -66,7 +68,7 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  border: #1a8654;
+  border: #1ba364;
   margin-left: 5.8rem;
 }
 .main-container .garden-content .fa-search {
@@ -136,7 +138,7 @@ header {
   margin-top: .5rem;
 }
 .main-container .garden-content .garden-cards .plant-card:first-child {
-  background-color: #1a8654;
+  background-color: #1ba364;
 }
 .main-container .garden-content .garden-cards .plant-card:first-child p {
   margin-bottom: 1rem;
