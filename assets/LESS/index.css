@@ -139,6 +139,7 @@ table {
   justify-content: space-between;
   background-color: #1a8654;
   color: cyan;
+  height: 5rem;
 }
 .navbar .logo-container {
   display: flex;
@@ -150,11 +151,14 @@ table {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: cyan;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
 * {
   border: 1px hotpink dashed;
+}
+.navbar {
+  border: 3px cyan;
 }
 header {
   width: 100%;

@@ -139,6 +139,7 @@ table {
   justify-content: space-between;
   background-color: #1a8654;
   color: cyan;
+  height: 5rem;
 }
 .navbar .logo-container {
   display: flex;
@@ -150,7 +151,7 @@ table {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: cyan;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
 * {
@@ -211,7 +212,7 @@ header {
   width: 25rem;
   text-indent: 2.5rem;
   height: 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: #81c7a1;
 }
 .main-container .garden-content ::placeholder {
