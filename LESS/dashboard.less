@@ -5,14 +5,15 @@
 
 header {
     width: 100%;
-    height: 10rem;
+    height: 20rem;
     border: 1px black dotted;
     background-color: @green2;
     background-image: url("../images/site-images/tree-tile-small3.gif");
     background-attachment: fixed;
     background-repeat: repeat-x;
-    background-position-y: 3rem;
-    background-size: 10rem; 
+    background-position-y: 5.5rem;
+    background-size: 20rem; 
+    // overflow-x: hidden;
 }
 
 
@@ -20,34 +21,40 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
-    padding: 3rem 5rem 0 3rem;
+    padding: 6rem 10rem 0 6rem;
+    // overflow-x: hidden;
+    width: auto;
 
     .garden-buttons {
         flex-flow: column nowrap;
         align-items: center;
-        width: 10rem;
-        border: red 1px solid;
+        width: 20rem;
+        // border: red 1px solid;
 
         .button-container {
             display: flex;
             flex-flow: column;
             align-items: center;
             justify-content: flex-start;
-            margin: 0 2rem 4rem 2rem;
+            margin: 0 4rem 8rem 4rem;
             background-color: @green2;
-            height: 4rem;
-            width: 4rem;
+            height: 6rem;
+            width: 6rem;
             border-radius: 1rem;
 
-            h5 {
-            margin-top: 1rem;
-            font-size: 1rem;
+            h4 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            }
+
+            svg {
+                margin-top: 1.25rem;
             }
 
             .garden-icon {
             width: 85%;
-            margin-top: .2rem;
-            font-size: 2.3rem;
+            margin-top: .4rem;
+            font-size: 3.6rem;
             text-align: center;
             }
 
@@ -56,7 +63,11 @@ header {
             }
 
             .fa-newspaper {
-                margin-top: .9rem;
+                margin-top: 1.25rem;
+            }
+
+            .fa-question-circle {
+                font-size: 2rem;
             }
         }
     }
@@ -73,21 +84,23 @@ header {
             justify-content: space-between;
             width: 100%;
             border: @green2;
-            margin-left: 4rem;
+            margin-left: 5.8rem;
         }
 
         .fa-search {
             position: relative;
-            left: -.7rem;
+            // left: -.1rem;
+            top: .15rem;
             color: rgb(129, 199, 161);
+            font-size: 1.75rem;
         }
 
         form input{
-            width: 25rem;
-            text-indent: 2.5rem;
-            height: 2rem;
+            width: 35rem;
+            text-indent: 4rem;
+            height: 3rem;
             margin-left: -2.75rem;
-            border-radius: .5rem;
+            border-radius: 1rem;
             border: 1px solid rgb(129, 199, 161);
             box-shadow: 2px 2px 2px lightgrey;
             
@@ -96,7 +109,7 @@ header {
             color: rgb(129, 199, 161);
             opacity: 1; /* Firefox */
             font-style: italic;
-            font-size: 1rem;
+            font-size: 1.6rem;
         }
 
 
@@ -105,7 +118,7 @@ header {
             flex-flow: row wrap;
             justify-content: flex-start;
             width: 100%;
-            padding: 2rem;
+            padding: 4rem;
             color: white;
 
             .plant-card {
@@ -113,14 +126,14 @@ header {
                 box-shadow: 2px 2px 5px grey;
                 background-color: rgb(126, 126, 126);
                 padding: 1rem;
-                border-radius: 1rem;
-                margin: .5rem;
+                border-radius: 2rem;
+                margin: 1rem;
                 width: 40%;
-                max-width: 20rem; 
-                min-width: 18rem;; 
-                min-height: 10rem; 
-                max-height: 14rem;
-                background-size: 25rem;
+                width: 25rem; 
+                // min-width: 36rem;; 
+                // min-height: 20rem; 
+                height: 20rem;
+                background-size: 50rem;
                 background-blend-mode: multiply;
                 background-repeat: no-repeat;
                 background-position: fixed;
@@ -131,23 +144,51 @@ header {
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-                justify-content: center;
+                justify-content: baseline;
                 height: 100%;
                 padding: 0 1rem;
             }
 
             h3 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
+                font-size: 3rem;
+                margin: 1rem 0;
                 font-weight: 600;
+            }
+
+            h3 i {
+                font-size: 2.25rem;
             }
 
             p {
                 font-weight: 400;
+                font-size: 1.5rem;
+                margin-top: .5rem;
             }
 
             .plant-card:first-child {
                 background-color: @green2;
+
+                p {
+                    margin-bottom: 1rem;
+                }
+
+                .get-started {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    height: 100%;
+                }
+
+                .get-started p {
+                    position: relative;
+                    top: -1rem;
+                    font-style: italic;
+                }
+
+                .fa-plus {
+                    font-size: 4rem;
+                    margin-left: 2rem;
+                }
             }
 
             .plant-card:nth-child(3) {
@@ -178,16 +219,22 @@ header {
             .care-icons {
                 display: flex;
                 justify-content: space-between;
-                width: 25%;
-                margin-top: 1rem;
+                align-items: flex-end;
+                width: 40%;
+                margin: 1rem 0;
+                font-size: 4rem;
+                height: 100%;
             }
 
             .care-icons .light {
                 color:rgb(255, 221, 31);
+                margin-right: 1rem;
             }
 
             .care-icons .water {
                 color:rgb(53, 208, 255);
+                text-align: left;
+                width: 50%;
             }
         }
 

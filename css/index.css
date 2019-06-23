@@ -137,26 +137,33 @@ table {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   background-color: #0d3b26;
+  height: 1.5rem;
   position: fixed;
   width: 100%;
   z-index: 10;
-  padding: 1rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
   box-shadow: 0 0 5px #0d3b26;
 }
 .navbar .logo-container {
   display: flex;
   width: 200px;
   margin: 0;
+  font-size: 2rem;
 }
 .navbar .nav-links {
-  width: 20rem;
+  width: 20%;
 }
 .navbar ul {
   display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: -2rem;
 }
 .navbar ul li {
   margin-left: 1rem;
+  font-size: 2rem;
 }
 a {
   text-decoration: none;
@@ -165,53 +172,59 @@ a {
 }
 header {
   width: 100%;
-  height: 10rem;
+  height: 20rem;
   border: 1px black dotted;
   background-color: #1a8654;
   background-image: url("../images/site-images/tree-tile-small3.gif");
   background-attachment: fixed;
   background-repeat: repeat-x;
-  background-position-y: 3rem;
-  background-size: 10rem;
+  background-position-y: 5.5rem;
+  background-size: 20rem;
 }
 .main-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  padding: 3rem 5rem 0 3rem;
+  padding: 6rem 10rem 0 6rem;
+  width: auto;
 }
 .main-container .garden-buttons {
   flex-flow: column nowrap;
   align-items: center;
-  width: 10rem;
-  border: red 1px solid;
+  width: 20rem;
 }
 .main-container .garden-buttons .button-container {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 2rem 4rem 2rem;
+  margin: 0 4rem 8rem 4rem;
   background-color: #1a8654;
-  height: 4rem;
-  width: 4rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 1rem;
 }
-.main-container .garden-buttons .button-container h5 {
-  margin-top: 1rem;
-  font-size: 1rem;
+.main-container .garden-buttons .button-container h4 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+.main-container .garden-buttons .button-container svg {
+  margin-top: 1.25rem;
 }
 .main-container .garden-buttons .button-container .garden-icon {
   width: 85%;
-  margin-top: 0.2rem;
-  font-size: 2.3rem;
+  margin-top: 0.4rem;
+  font-size: 3.6rem;
   text-align: center;
 }
 .main-container .garden-buttons .button-container .fas {
   color: #fff;
 }
 .main-container .garden-buttons .button-container .fa-newspaper {
-  margin-top: 0.9rem;
+  margin-top: 1.25rem;
+}
+.main-container .garden-buttons .button-container .fa-question-circle {
+  font-size: 2rem;
 }
 .main-container .garden-content {
   display: flex;
@@ -225,19 +238,20 @@ header {
   justify-content: space-between;
   width: 100%;
   border: #1a8654;
-  margin-left: 4rem;
+  margin-left: 5.8rem;
 }
 .main-container .garden-content .fa-search {
   position: relative;
-  left: -0.7rem;
+  top: 0.15rem;
   color: #81c7a1;
+  font-size: 1.75rem;
 }
 .main-container .garden-content form input {
-  width: 25rem;
-  text-indent: 2.5rem;
-  height: 2rem;
+  width: 35rem;
+  text-indent: 4rem;
+  height: 3rem;
   margin-left: -2.75rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: 1px solid #81c7a1;
   box-shadow: 2px 2px 2px lightgrey;
 }
@@ -246,28 +260,26 @@ header {
   opacity: 1;
   /* Firefox */
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 .main-container .garden-content .garden-cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   width: 100%;
-  padding: 2rem;
+  padding: 4rem;
   color: white;
 }
 .main-container .garden-content .garden-cards .plant-card {
   box-shadow: 2px 2px 5px grey;
   background-color: #7e7e7e;
   padding: 1rem;
-  border-radius: 1rem;
-  margin: 0.5rem;
+  border-radius: 2rem;
+  margin: 1rem;
   width: 40%;
-  max-width: 20rem;
-  min-width: 18rem;
-  min-height: 10rem;
-  max-height: 14rem;
-  background-size: 25rem;
+  width: 25rem;
+  height: 20rem;
+  background-size: 50rem;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: fixed;
@@ -277,20 +289,43 @@ header {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: baseline;
   height: 100%;
   padding: 0 1rem;
 }
 .main-container .garden-content .garden-cards h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin: 1rem 0;
   font-weight: 600;
+}
+.main-container .garden-content .garden-cards h3 i {
+  font-size: 2.25rem;
 }
 .main-container .garden-content .garden-cards p {
   font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 .main-container .garden-content .garden-cards .plant-card:first-child {
   background-color: #1a8654;
+}
+.main-container .garden-content .garden-cards .plant-card:first-child p {
+  margin-bottom: 1rem;
+}
+.main-container .garden-content .garden-cards .plant-card:first-child .get-started {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 100%;
+}
+.main-container .garden-content .garden-cards .plant-card:first-child .get-started p {
+  position: relative;
+  top: -1rem;
+  font-style: italic;
+}
+.main-container .garden-content .garden-cards .plant-card:first-child .fa-plus {
+  font-size: 4rem;
+  margin-left: 2rem;
 }
 .main-container .garden-content .garden-cards .plant-card:nth-child(3) {
   background-image: url('../images/plant-images/plant-card-1.jpg');
@@ -313,12 +348,18 @@ header {
 .main-container .garden-content .garden-cards .care-icons {
   display: flex;
   justify-content: space-between;
-  width: 25%;
-  margin-top: 1rem;
+  align-items: flex-end;
+  width: 40%;
+  margin: 1rem 0;
+  font-size: 4rem;
+  height: 100%;
 }
 .main-container .garden-content .garden-cards .care-icons .light {
   color: #ffdd1f;
+  margin-right: 1rem;
 }
 .main-container .garden-content .garden-cards .care-icons .water {
   color: #35d0ff;
+  text-align: left;
+  width: 50%;
 }
