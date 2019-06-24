@@ -135,6 +135,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.3rem;
+}
+p {
+  font-size: 1.5rem;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -181,25 +199,35 @@ header {
   width: 100%;
   height: 20rem;
   background-color: #1ba364;
-  background-image: url("../images/site-images/tree-tile-small4.png");
+  background-image: url("../images/site-images/tree-tile-small3.gif");
   background-attachment: fixed;
   background-repeat: repeat-x;
   background-position-y: 5.5rem;
   background-size: 20rem;
+  background-blend-mode: multiply;
 }
-.main-container {
+header h1 {
+  position: relative;
+  z-index: 4;
+  color: white;
+  top: 12rem;
+  left: 10rem;
+  font-size: 6rem;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', ' Verdana', sans-serif;
+}
+.main-dash-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
   padding: 6rem 10rem 0 6rem;
   width: auto;
 }
-.main-container .garden-buttons {
+.main-dash-container .garden-buttons {
   flex-flow: column nowrap;
   align-items: center;
   width: 20rem;
 }
-.main-container .garden-buttons .button-container {
+.main-dash-container .garden-buttons .button-container {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -210,82 +238,89 @@ header {
   width: 6rem;
   border-radius: 1rem;
   box-shadow: 2px 2px 5px grey;
+  transition: 0.2s all ease;
 }
-.main-container .garden-buttons .button-container:hover {
+.main-dash-container .garden-buttons .button-container:hover {
   background-image: radial-gradient(#74f740, #24ce7f);
   box-shadow: 5px 5px 5px #039a81;
   transform: translate(-1px, -1px) scale(1.02);
   cursor: pointer;
+  transition: 0.1s all ease;
 }
-.main-container .garden-buttons .button-container:active {
-  background-image: radial-gradient(yellow, #FAC263);
+.main-dash-container .garden-buttons .button-container:active {
+  background-image: radial-gradient(gold, #e455ad);
   box-shadow: 1px 1px 2px #ef9908;
   transform: translate(1px, 1px) scale(1);
 }
-.main-container .garden-buttons .button-container h4 {
+.main-dash-container .garden-buttons .button-container h4 {
   margin-top: 2rem;
   font-size: 1.3rem;
   width: 10rem;
   text-align: center;
 }
-.main-container .garden-buttons .button-container svg {
+.main-dash-container .garden-buttons .button-container svg {
   margin-top: 1.25rem;
 }
-.main-container .garden-buttons .button-container .garden-icon {
+.main-dash-container .garden-buttons .button-container .garden-icon {
   width: 85%;
   margin-top: 0.4rem;
   font-size: 3.6rem;
   text-align: center;
 }
-.main-container .garden-buttons .button-container .fas {
+.main-dash-container .garden-buttons .button-container .fas {
   color: #fff;
 }
-.main-container .garden-buttons .button-container .fa-newspaper {
+.main-dash-container .garden-buttons .button-container .fa-newspaper {
   margin-top: 1.25rem;
 }
-.main-container .garden-buttons .button-container .fa-question-circle {
+.main-dash-container .garden-buttons .button-container .fa-question-circle {
   font-size: 4rem;
   margin-top: 1rem;
 }
-.main-container .garden-buttons .button-container:nth-child(3) {
+.main-dash-container .garden-buttons .button-container:nth-child(3) {
   box-shadow: 2px 2px 5px grey;
   background-image: radial-gradient(gold, #FAC263);
+  transition: 0.2s all ease;
 }
-.main-container .garden-buttons .button-container:nth-child(3):hover {
+.main-dash-container .garden-buttons .button-container:nth-child(3):hover {
   background-image: radial-gradient(yellow, #FAC263);
-  box-shadow: #ef9908;
+  box-shadow: 5px 5px 5px #ef9908;
   border: none;
+  transition: 0.1s all ease;
 }
-.main-container .garden-buttons .button-container:nth-child(3):active {
-  background-image: radial-gradient(gold, #ce6300);
+.main-dash-container .garden-buttons .button-container:nth-child(3):active {
+  background-image: radial-gradient(gold, #e455ad);
   box-shadow: 1px 1px 2px #ef9908;
 }
-.main-container .garden-content {
+.main-dash-container .garden-content {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   justify-content: flex-start;
 }
-.main-container .garden-content .garden-search-add {
+.main-dash-container .garden-content .garden-search-add {
   display: flex;
-  flex-flow: column-reverse nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   border: #1ba364;
-  margin-left: 5.8rem;
+  margin-left: 5rem;
 }
-.main-container .garden-content .filter {
+.main-dash-container .garden-content .filter {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  margin-top: -2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
   width: 100%;
+  display: none;
 }
-.main-container .garden-content .filter h3 {
+.main-dash-container .garden-content .filter h3 {
   font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: 500;
 }
-.main-container .garden-content .filter .filter-box {
+.main-dash-container .garden-content .filter .filter-box {
   display: flex;
   flex-flow: column;
   font-size: 1.5rem;
@@ -293,63 +328,71 @@ header {
   justify-content: center;
   width: 100%;
 }
-.main-container .garden-content .filter div {
-  margin: 1rem 0;
+.main-dash-container .garden-content .filter div {
+  margin: 0.5rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  font-size: 2rem;
+  align-items: center;
 }
-.main-container .garden-content .filter i {
+.main-dash-container .garden-content .filter i {
   font-size: 1.5rem;
 }
-.main-container .garden-content .filter .plant-icons {
+.main-dash-container .garden-content .filter .plant-icons {
   display: flex;
   justify-content: space-around;
   color: #1ba364;
   width: 100%;
+  margin-right: 1rem;
 }
-.main-container .garden-content .filter .plant-icons i {
+.main-dash-container .garden-content .filter .plant-icons i {
   font-size: 2rem;
   margin: 0.25rem 1rem;
 }
-.main-container .garden-content .filter .light-icons {
+.main-dash-container .garden-content .filter .plant-icons svg {
+  font-size: 2rem;
+  margin: 0.25rem 1rem;
+}
+.main-dash-container .garden-content .filter .light-icons {
   width: 32%;
 }
-.main-container .garden-content .filter .light-icons i {
+.main-dash-container .garden-content .filter .light-icons i {
   margin: 0 0.5rem;
   color: #FAC263;
 }
-.main-container .garden-content .filter .water-icons {
+.main-dash-container .garden-content .filter .water-icons {
   display: flex;
   color: #35d0ff;
   width: 32%;
 }
-.main-container .garden-content .filter .water-icons div {
-  margin: 0 1rem;
+.main-dash-container .garden-content .filter .water-icons div {
+  margin: 0 0.5rem;
 }
-.main-container .garden-content .filter .pet-icons {
+.main-dash-container .garden-content .filter .pet-icons {
   width: 32%;
 }
-.main-container .garden-content .filter .pet-icons i {
-  margin-left: 1.5rem;
+.main-dash-container .garden-content .filter .pet-icons i {
+  margin-left: 1rem;
   font-size: 2rem;
   color: #e67294;
 }
-.main-container .garden-content .filter .other-icons {
+.main-dash-container .garden-content .filter .other-icons {
   width: 100%;
+  display: flex;
 }
-.main-container .garden-content .fa-search {
+.main-dash-container .garden-content .fa-search {
   position: relative;
   top: 0.15rem;
   color: #81c7a1;
   font-size: 1.75rem;
   z-index: 2;
 }
-.main-container .garden-content form {
+.main-dash-container .garden-content form {
   width: 100%;
 }
-.main-container .garden-content form input {
-  width: 50%;
+.main-dash-container .garden-content form input {
+  width: 31rem;
   text-indent: 4rem;
   height: 3rem;
   border-radius: 1rem;
@@ -359,14 +402,14 @@ header {
   background-repeat: no-repeat;
   background-position: 0.5rem 0.5rem;
 }
-.main-container .garden-content ::placeholder {
+.main-dash-container .garden-content ::placeholder {
   color: #81c7a1;
   opacity: 1;
   /* Firefox */
   font-style: italic;
   font-size: 1.6rem;
 }
-.main-container .garden-content .garden-cards {
+.main-dash-container .garden-content .garden-cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -375,22 +418,28 @@ header {
   padding-top: 1rem;
   color: white;
 }
-.main-container .garden-content .garden-cards .plant-card {
+.main-dash-container .garden-content .garden-cards .plant-card {
   box-shadow: 2px 2px 5px grey;
   background-color: #7e7e7e;
   padding: 1rem;
   border-radius: 2rem;
   margin: 1rem;
   width: 40%;
-  width: 25rem;
+  width: 29rem;
   height: 20rem;
   background-size: 50rem;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: fixed;
   cursor: pointer;
+  transition: 0.2s all ease;
 }
-.main-container .garden-content .garden-cards .card-container {
+.main-dash-container .garden-content .garden-cards .plant-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 5px #026857;
+  transition: 0.1s all ease;
+}
+.main-dash-container .garden-content .garden-cards .card-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -398,59 +447,59 @@ header {
   height: 100%;
   padding: 0 1rem;
 }
-.main-container .garden-content .garden-cards h3 {
+.main-dash-container .garden-content .garden-cards h3 {
   font-size: 3rem;
   margin: 1rem 0;
   font-weight: 600;
 }
-.main-container .garden-content .garden-cards h3 i {
+.main-dash-container .garden-content .garden-cards h3 i {
   font-size: 2.25rem;
 }
-.main-container .garden-content .garden-cards p {
+.main-dash-container .garden-content .garden-cards p {
   font-weight: 400;
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
-.main-container .garden-content .garden-cards .plant-card:first-child {
+.main-dash-container .garden-content .garden-cards .plant-card:first-child {
   background-color: #1ba364;
 }
-.main-container .garden-content .garden-cards .plant-card:first-child p {
+.main-dash-container .garden-content .garden-cards .plant-card:first-child p {
   margin-bottom: 1rem;
 }
-.main-container .garden-content .garden-cards .plant-card:first-child .get-started {
+.main-dash-container .garden-content .garden-cards .plant-card:first-child .get-started {
   display: flex;
   justify-content: center;
   align-items: baseline;
   height: 100%;
 }
-.main-container .garden-content .garden-cards .plant-card:first-child .get-started p {
+.main-dash-container .garden-content .garden-cards .plant-card:first-child .get-started p {
   position: relative;
   top: -1rem;
   font-style: italic;
 }
-.main-container .garden-content .garden-cards .plant-card:first-child .fa-plus {
+.main-dash-container .garden-content .garden-cards .plant-card:first-child .fa-plus {
   font-size: 4rem;
   margin-left: 2rem;
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(3) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(3) {
   background-image: url('../images/plant-images/plant-card-1.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(4) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(4) {
   background-image: url('../images/plant-images/plant-card-2.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(5) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(5) {
   background-image: url('../images/plant-images/plant-card-4.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(6) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(6) {
   background-image: url('../images/plant-images/plant-card-5.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(7) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(7) {
   background-image: url('../images/plant-images/plant-card-6.jpg');
 }
-.main-container .garden-content .garden-cards .plant-card:nth-child(2) {
+.main-dash-container .garden-content .garden-cards .plant-card:nth-child(2) {
   background-image: url('../images/plant-images/plant-card-3.jpg');
 }
-.main-container .garden-content .garden-cards .care-icons {
+.main-dash-container .garden-content .garden-cards .care-icons {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -459,11 +508,11 @@ header {
   font-size: 4rem;
   height: 100%;
 }
-.main-container .garden-content .garden-cards .care-icons .light {
+.main-dash-container .garden-content .garden-cards .care-icons .light {
   color: #ffdd1f;
   margin-right: 1rem;
 }
-.main-container .garden-content .garden-cards .care-icons .water {
+.main-dash-container .garden-content .garden-cards .care-icons .water {
   color: #35d0ff;
   text-align: left;
   width: 50%;
