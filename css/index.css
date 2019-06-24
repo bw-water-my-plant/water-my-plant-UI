@@ -147,6 +147,7 @@ table {
 }
 .navbar .logo-container {
   display: flex;
+  align-items: center;
   margin: 0.5rem 2rem 1rem 2rem;
   font-size: 2rem;
   height: 100%;
@@ -154,22 +155,25 @@ table {
 .navbar .logo-container img {
   height: 5rem;
 }
-.navbar .nav-links {
-  width: 20%;
+.navbar .logo-container a {
+  font-size: 4rem;
+  padding-left: 1rem;
 }
-.navbar ul {
+.navbar .nav-links {
+  width: 30%;
+  position: relative;
+  left: -4rem;
   display: flex;
   justify-content: space-around;
-  position: relative;
-  left: -2rem;
 }
-.navbar ul li {
+.navbar .nav-links li {
   margin-left: 1rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
 header {
@@ -238,26 +242,96 @@ header {
 }
 .main-container .garden-content .garden-search-add {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column-reverse nowrap;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   border: #1ba364;
   margin-left: 5.8rem;
+}
+.main-container .garden-content .filter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: -2rem;
+  width: 100%;
+}
+.main-container .garden-content .filter h3 {
+  font-size: 1.5rem;
+}
+.main-container .garden-content .filter .filter-box {
+  display: flex;
+  flex-flow: column;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main-container .garden-content .filter div {
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.main-container .garden-content .filter i {
+  font-size: 1.5rem;
+}
+.main-container .garden-content .filter .plant-icons {
+  display: flex;
+  justify-content: space-around;
+  color: #1ba364;
+  width: 100%;
+}
+.main-container .garden-content .filter .plant-icons i {
+  font-size: 2rem;
+  margin: 0.25rem 1rem;
+}
+.main-container .garden-content .filter .light-icons {
+  width: 32%;
+}
+.main-container .garden-content .filter .light-icons i {
+  margin: 0 0.5rem;
+  color: #FAC263;
+}
+.main-container .garden-content .filter .water-icons {
+  display: flex;
+  color: #35d0ff;
+  width: 32%;
+}
+.main-container .garden-content .filter .water-icons div {
+  margin: 0 1rem;
+}
+.main-container .garden-content .filter .pet-icons {
+  width: 32%;
+}
+.main-container .garden-content .filter .pet-icons i {
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  color: #e67294;
+}
+.main-container .garden-content .filter .other-icons {
+  width: 100%;
 }
 .main-container .garden-content .fa-search {
   position: relative;
   top: 0.15rem;
   color: #81c7a1;
   font-size: 1.75rem;
+  z-index: 2;
+}
+.main-container .garden-content form {
+  width: 100%;
 }
 .main-container .garden-content form input {
-  width: 35rem;
+  width: 50%;
   text-indent: 4rem;
   height: 3rem;
-  margin-left: -2.75rem;
   border-radius: 1rem;
   border: 1px solid #81c7a1;
   box-shadow: 2px 2px 2px lightgrey;
+  background-image: url(../images/site-images/magnify.svg);
+  background-repeat: no-repeat;
+  background-position: 0.5rem 0.5rem;
 }
 .main-container .garden-content ::placeholder {
   color: #81c7a1;

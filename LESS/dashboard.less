@@ -83,11 +83,90 @@ header {
 
         .garden-search-add {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: column-reverse nowrap;
             justify-content: space-between;
+            align-items: flex-start;
             width: 100%;
             border: @green2;
             margin-left: 5.8rem;
+        }
+
+        .filter {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            margin-top: -2rem;
+            width: 100%;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .filter-box {
+                display: flex;
+                flex-flow: column;
+                font-size: 1.5rem;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            div {
+                margin: 1rem 0;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+
+            .plant-icons {
+                // width: 100%;
+                display: flex;
+                justify-content: space-around;
+                color: @green2;
+                width: 100%;
+            }
+
+            .plant-icons i {
+                font-size: 2rem;
+                margin: .25rem 1rem;
+            }
+
+            .light-icons {
+                width: 32%;
+            }
+
+            .light-icons i {
+                margin: 0 .5rem;
+                color: @gold;
+            }
+            
+            .water-icons {
+                display: flex;
+                color: rgb(53, 208, 255);
+                width: 32%;
+            }
+
+            .water-icons div {
+                margin: 0 1rem;
+            }
+
+            .pet-icons {
+                width: 32%;
+            }
+
+            .pet-icons i{
+                margin-left: 1.5rem;
+                font-size: 2rem;
+                color: rgb(230, 114, 148);
+            }
+
+            .other-icons {
+                width: 100%;
+            }
         }
 
         .fa-search {
@@ -96,17 +175,23 @@ header {
             top: .15rem;
             color: rgb(129, 199, 161);
             font-size: 1.75rem;
+            z-index: 2;
         }
 
-        form input{
-            width: 35rem;
+        form {
+            width: 100%;
+        }
+
+        form input {
+            width: 50%;
             text-indent: 4rem;
             height: 3rem;
-            margin-left: -2.75rem;
             border-radius: 1rem;
             border: 1px solid rgb(129, 199, 161);
             box-shadow: 2px 2px 2px lightgrey;
-            
+            background-image: url(../images/site-images/magnify.svg);
+            background-repeat: no-repeat;
+            background-position: .5rem .5rem;
         }
         ::placeholder {
             color: rgb(129, 199, 161);
