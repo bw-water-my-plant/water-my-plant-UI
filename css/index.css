@@ -208,6 +208,18 @@ header {
   height: 6rem;
   width: 6rem;
   border-radius: 1rem;
+  box-shadow: 2px 2px 5px grey;
+}
+.main-container .garden-buttons .button-container:hover {
+  background-image: radial-gradient(#74f740, #24ce7f);
+  box-shadow: 5px 5px 5px #039a81;
+  transform: translate(-1px, -1px) scale(1.02);
+  cursor: pointer;
+}
+.main-container .garden-buttons .button-container:active {
+  background-image: radial-gradient(yellow, #FAC263);
+  box-shadow: 1px 1px 2px #ef9908;
+  transform: translate(1px, 1px) scale(1);
 }
 .main-container .garden-buttons .button-container h4 {
   margin-top: 2rem;
@@ -233,6 +245,19 @@ header {
 .main-container .garden-buttons .button-container .fa-question-circle {
   font-size: 4rem;
   margin-top: 1rem;
+}
+.main-container .garden-buttons .button-container:nth-child(3) {
+  box-shadow: 2px 2px 5px grey;
+  background-image: radial-gradient(gold, #FAC263);
+}
+.main-container .garden-buttons .button-container:nth-child(3):hover {
+  background-image: radial-gradient(yellow, #FAC263);
+  box-shadow: #ef9908;
+  border: none;
+}
+.main-container .garden-buttons .button-container:nth-child(3):active {
+  background-image: radial-gradient(gold, #ce6300);
+  box-shadow: 1px 1px 2px #ef9908;
 }
 .main-container .garden-content {
   display: flex;
@@ -346,6 +371,7 @@ header {
   justify-content: flex-start;
   width: 100%;
   padding: 4rem;
+  padding-top: 1rem;
   color: white;
 }
 .main-container .garden-content .garden-cards .plant-card {

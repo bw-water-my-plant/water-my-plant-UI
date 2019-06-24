@@ -41,6 +41,20 @@ header {
             height: 6rem;
             width: 6rem;
             border-radius: 1rem;
+            box-shadow: 2px 2px 5px grey;
+
+            &:hover {
+                background-image: radial-gradient(rgb(116, 247, 64), #24ce7f);
+                box-shadow: 5px 5px  5px lighten(@green3, 10%);
+                transform: translate(-1px, -1px) scale(1.02);
+                cursor: pointer;
+            }
+            &:active {
+                background-image: radial-gradient(yellow, @gold);
+                box-shadow: 1px 1px  2px darken(@gold, 20%);
+                transform: translate(1px, 1px) scale(1.0);
+
+            }
 
             h4 {
             margin-top: 2rem;
@@ -71,6 +85,24 @@ header {
             .fa-question-circle {
                 font-size: 4rem;
                 margin-top: 1rem;
+            }
+        }
+
+        .button-container:nth-child(3) {
+            box-shadow: 2px 2px 5px grey;
+            background-image: radial-gradient(gold, @gold);
+            // border: 2px solid yellow;
+
+            &:hover {
+                background-image: radial-gradient(yellow, @gold);
+                box-shadow: darken(@gold, 20%);
+                border: none;
+            }
+
+            &:active {
+                background-image: radial-gradient(gold, rgb(206, 99, 0));
+                box-shadow: 1px 1px 2px darken(@gold, 20%);
+
             }
         }
     }
@@ -207,6 +239,7 @@ header {
             justify-content: flex-start;
             width: 100%;
             padding: 4rem;
+            padding-top: 1rem;
             color: white;
 
             .plant-card {
