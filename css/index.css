@@ -202,6 +202,8 @@ a {
 }
 .aboutUsHeader p {
   padding: 10% 0 10% 0;
+  font-size: 3rem;
+  text-align: center;
 }
 .meetOurTeam {
   display: flex;
@@ -212,25 +214,56 @@ a {
 }
 .meetOurTeam .teamShowcase {
   display: flex;
+  flex-direction: column;
 }
-.meetOurTeam .teamShowcase .teamMember {
+.meetOurTeam .teamShowcase .topHalfTeam {
+  display: flex;
+  padding-bottom: 5%;
+}
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.meetOurTeam .teamShowcase .teamMember img {
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember img {
   border-radius: 100%;
+  padding-bottom: 5%;
 }
-.meetOurTeam .teamShowcase .teamMember .info {
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info {
   text-align: center;
-  margin: 10%;
   border: solid #10613c;
   background-color: #10613c;
   border-radius: 10%;
+  max-width: 33%;
 }
-.meetOurTeam .teamShowcase .teamMember .info p {
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info p {
   padding: 3%;
   color: white;
+  font-size: 1rem;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam {
+  display: flex;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember img {
+  border-radius: 100%;
+  padding-bottom: 5%;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info {
+  text-align: center;
+  border: solid #10613c;
+  background-color: #10613c;
+  border-radius: 10%;
+  max-width: 33%;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info p {
+  padding: 3%;
+  color: white;
+  font-size: 1rem;
 }
 .meetOurTeam h2 {
   color: #10613c;
@@ -249,11 +282,21 @@ a {
 .ourCoreValues .buildLearnGrow .coreValue {
   display: flex;
 }
+.ourCoreValues .buildLearnGrow .coreValue img {
+  padding-right: 8%;
+}
 .ourCoreValues .buildLearnGrow .coreValue .valueInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
+}
+.ourCoreValues .buildLearnGrow .coreValue .valueInfo h4 {
+  padding-bottom: 5%;
+}
+.ourCoreValues .buildLearnGrow h2 {
+  padding-bottom: 10%;
+  color: #10613c;
 }
 .ourCoreValues .coreValuesImg {
   width: 50%;

@@ -6,6 +6,8 @@
     
     p {
         padding: 10% 0 10% 0;
+        font-size: 3rem;
+        text-align: center;
     }
 }
 
@@ -18,29 +20,77 @@
 
     .teamShowcase {
         display: flex;
+        flex-direction: column;
+
         
-        .teamMember {
+        .topHalfTeam {
+            
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding-bottom: 5%;
 
-                img {
-                    border-radius: 100%;
-                }
-
-            .info {
-                text-align: center;
-                margin: 10%;
-                border: solid @a-primary1;
-                background-color: @a-primary1;
-                border-radius: 10%;
-
-                p {
-                    padding: 3%;
-                    color: white;
+            .teamMember {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // border: solid;
+                
+    
+                    img {
+                        border-radius: 100%;
+                        padding-bottom: 5%;
+                    }
+    
+                .info {
+                    text-align: center;
+                    // margin: 10%;
+                    border: solid @a-primary1;
+                    background-color: @a-primary1;
+                    border-radius: 10%;
+                    max-width: 33%;
+    
+                    p {
+                        padding: 3%;
+                        color: white;
+                        font-size: 1rem;
+                    }
                 }
             }
         }
+
+        .bottomHalfTeam {
+            
+            display: flex;
+            
+
+            .teamMember {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // border: solid;
+                
+    
+                    img {
+                        border-radius: 100%;
+                        padding-bottom: 5%;
+                    }
+    
+                .info {
+                    text-align: center;
+                    // margin: 10%;
+                    border: solid @a-primary1;
+                    background-color: @a-primary1;
+                    border-radius: 10%;
+                    max-width: 33%;
+    
+                    p {
+                        padding: 3%;
+                        color: white;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        
     }
 
     h2 {
@@ -63,14 +113,28 @@
         .coreValue {
             display: flex;
 
+            img {
+                padding-right: 8%;
+            }
+
             .valueInfo {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 50%;
+
+                h4 {
+                    padding-bottom: 5%;
+                }
             }
         }
+
+        h2 {
+            padding-bottom: 10%;
+            color: @a-primary1;
+        }
     }
+
 
     .coreValuesImg {
         width: 50%;
