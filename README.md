@@ -10,3 +10,10 @@ Responsive meta tag
 
 font-size: 62.5%. Because 62.5% of 16px is 10px, 
 # 1rem = 10px
+
+
+#font being used- include in head tag of page
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto&display=swap" rel="stylesheet"> 
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
