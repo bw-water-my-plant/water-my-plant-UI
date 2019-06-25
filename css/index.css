@@ -253,15 +253,38 @@ a {
   .pagewide .wmpheader .wmpintrobox {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
   .pagewide .wmpheader .wmpintrobox .wmpmedia {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 53%;
+    margin-top: 8rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
+    font-size: 6rem;
+    margin-top: 3.5rem;
+    line-height: 7.4rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
+    text-align: center;
+    font-size: 1.8rem;
+    width: 80%;
+    margin-top: 1.8rem;
+    margin-bottom: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
+    width: 22.4rem;
+    height: 5.6rem;
+    font-size: 2.5rem;
+    margin-top: 0rem;
   }
   .pagewide .wmpheader .wmpintrobox .yellowman {
     display: block;
+    margin-top: 10rem;
+    width: 56%;
   }
   .pagewide .wmpheader .wmpintrobox .greenman {
     display: none;
