@@ -23,29 +23,242 @@
 
         <header> <!-- banner images for pages like Dashboard and Profile -->
             <h1>News from the Garden</h1>
+            <div class="date-weather">DATE, TIME AND WEATHER GO HERE</div>
         </header>
 
         <main class="main-news-container">
-            <div class="news-container">
-                <nav class="tabs">
-                    <p>TABS GO HERE</p>
-                </nav>
-                <div class="weather-time-container">
-                    <p>DATE, TIME AND WEATHER GO HERE</p>
+            <div class="tabs">
+                <div class="topics">
+                    <div data-tab="all" class="tab active-tab"><p>All Articles</p></div>
+                    <div data-tab="gardening-tips" class="tab"><p>Gardening Tips</p></div>
+                    <div data-tab="news" class="tab"><p>News</p></div>
+                    <div data-tab="dear-rosie" class="tab"><p>Dear Rosie</p></div>
+                    <div data-tab="opinion" class="tab"><p>Opinion</p></div>
+                    <div data-tab="world" class="tab"><p>Garden World</p></div>
                 </div>
+            </div>
+
+            
+
+            <div class="news-container">
                 <section class="carousel-container">
                     <p>CAROUSEL GOES HERE</p>
                 </section>
+
                 <section class="newsfeed">
-                    <h2 class="section-title">News</h2>
-                    <article>
+                    <h2 class="section-title">All News</h2>
+                    <!-- <article>
                         <h3 class="article-title">Title here</h3>
                         <h4 class="author">Jane Smith</h4>
                         <div class="article-content">
                             <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eaque error alias corrupti repellendus voluptas accusamus unde sunt. Ipsa adipisci sequi perspiciatis non earum similique fugiat illum. Officia, commodi sapiente!
                             </p>
                         </div>
-                    </article>
+                    </article> -->
+
+                    <!-- CARDS COMPONENT -->
+                    <div class="cards-container">
+            
+                <!-- CARD COMPONENTS -->
+                        <div class="card" data-tab="gardening-tips">
+                            <img class="headline-img" src="/images/plant-images/plant-card-1.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>15 Things you never knew about succulents and were afraid to ask</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By GEORGE CLOONEY</span>
+                                </div>
+                                <p class="article">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="news">
+                            <img class="headline-img" src="/images/plant-images/plant-card-2.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Monsanto unleashes new lawsuits, farmers stage protest in capitol</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By NATALIE PORTMAN</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="dear-rosie">
+                            <img class="headline-img" src="/images/plant-images/plant-card-3.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Dear Rosie: How do I persuade the neighbors not to trample my garden?</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By OWEN WILSON</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="world">
+                            <img class="headline-img" src="/images/plant-images/plant-card-4.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Pesticide use in Green Revolution led to increase in cancer rates, study finds</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By JANELLE MONAE</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="gardening-tips">
+                            <img class="headline-img" src="/images/plant-images/plant-card-5.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>How to convert your garden to an organic utopia</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By CHRIS HEMSWORTH</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="opinion">
+                            <img class="headline-img" src="/images/plant-images/plant-card-6.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>GMOs aren't the problem. Corporations are.</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By TOM HANKS</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="news">
+                            <img class="headline-img" src="/images/plant-images/plant-card-7.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Florida woman fights crocodile in garden, wins</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By RUTH BADER GINSBURG</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="world">
+                            <img class="headline-img" src="/images/plant-images/plant-card-1.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Kenyan school children using slingshots to plant trees</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By CATE BLANCHETT</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="opinion">
+                            <img class="headline-img" src="/images/plant-images/plant-card-1.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>You should make your own potting mix, and here's why</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By MILES MORALES</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="gardening-tips">
+                            <img class="headline-img" src="/images/plant-images/plant-card-1.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Quick and easy blackberries</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By RACHEL MADDOW</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                        <div class="card" data-tab="dear-rosie">
+                            <img class="headline-img" src="/images/plant-images/plant-card-1.jpg" alt="An image of echeveria succulents.">
+                            <div class="article-content">
+                                <div class="headline">
+                                    <h2>Dear Rosie: I've fallen out of love with gardening. Can you help?</h2>
+                                </div>
+                                <div class="author">
+                                    <div class="img-container">
+                                        <img src="./images/site-images/logo-green.png" />
+                                    </div>
+                                    <span>By OWEN WILSON</span>
+                                </div>
+                                <p class="article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis similique velit maxime corporis illo labore quia laborum accusantium magnam. Veritatis, sapiente similique cupiditate ipsa dolore magni ut aperiam magnam.
+                                    </p>
+                            </div>
+                        </div>
+                    
+                    </div>
                 </section>
 
             </div>

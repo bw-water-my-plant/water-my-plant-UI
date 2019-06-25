@@ -1,3 +1,5 @@
+@import 'variables.less';
+
 header {
     width: 100%;
     height: 20rem;
@@ -6,19 +8,171 @@ header {
     background-image: url("../images/site-images/tree-tile-small3.gif");
     background-attachment: fixed;
     background-repeat: repeat-x;
-    background-position-y: 5.5rem;
-    background-size: 20rem; 
+    background-position-y: 2rem;
+    background-size: 30rem; 
     background-blend-mode: multiply;
+    display: flex;
+
+
+    // width: 100%;
+    // height: 20rem;
+    // // border: 1px black dotted;
+    // background-color: @a-primary3;
+    // background-image: url("../images/site-images/tree-tile-small3.gif");
+    // background-attachment: fixed;
+    // background-repeat: repeat-x;
+    // background-position-y: 5.5rem;
+    // background-size: 20rem; 
+    // background-blend-mode: multiply;
     // overflow-x: hidden;
 
+
+    // News from the Garden title
     h1 {
         position: relative;
         z-index: 4;
         color: white;
-        top: 12rem;
-        left: 10rem;
+        width: auto;
+        top: 61%;
+        left: 18%;
+        right: 15%;
         font-size: 6rem;
         font-family: 'Segoe UI', 'Tahoma', 'Geneva',' Verdana', sans-serif,
+    }
 
+    // the date and weather widget
+    .date-weather {
+        position: relative;
+        z-index: 3;
+        color: white;
+        top: 9rem;
+        left: 70%;
+        font-size: 2rem;
+        display: none;
+    }
+}
+
+.main-news-container {
+    // the tabs banner to select a news topic
+    width: 100%;
+    background-color: @b-primary6;
+
+    .topics {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 
+            repeat(6, calc(35% - 40px))
+            1rem;
+        grid-template-rows: minmax(2rem, 1fr);
+        padding: 1rem;
+        background-color: @a-primary1;
+        overflow-x: scroll;
+
+        .topics::after {
+            content: ‘’;
+          }
+
+        .tab {
+            background-color: @a-primary4;
+            padding: 2rem 1rem;
+            border: 1px solid @a-secondary2;
+            border-radius: 1rem;
+            color: white;
+            box-shadow: 2px 2px 5px darken(@a-primary1, 10%);
+            text-align: center;
+            // width: 15%;
+
+            p {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .news-container {
+        margin: 0 4rem;
+        // border: 1px dotted seagreen;
+    }
+    //the carousel of relevant articles
+    .carousel-container {
+        height: 10rem;
+        border: 1px solid teal;
+        margin: 2rem 0;
+    }
+
+    // the news articles
+
+    .cards-container {
+        .flex(center, center, row);
+        width: 100%;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        @media(min-width: 1200px){
+          width: 1200px;
+        }
+
+        .card {
+          .flex(space-between, none, column);
+          background-image:linear-gradient(white, @b-primary3);
+          width: 100%;
+          margin-bottom: 5rem;
+          border-radius: 2rem;
+          box-shadow: 8px 8px 10px @b-primary4;
+          
+
+
+            .headline {
+                position: relative;
+                z-index: 5;
+                // font-size: 8rem;
+                // font-family: Didot, serif;
+                // margin: -20rem 2rem 0 2rem;
+                color: black;
+                // border: 2px red solid;
+                padding: 1rem 3rem;
+                font-weight: 500;
+                padding-bottom: 1rem;
+            }
+
+            .headline-img {
+                width: 100%;
+                height: 40rem;
+                object-fit: cover;
+                background-image: linear-gradient(black, white);
+                mix-blend-mode: multiply;
+                border-radius: 2rem 2rem 0 0;
+            }
+
+            .article-content {
+                background-color: white;
+                border-radius: 0 0 2rem 2rem;
+            }
+
+          .author {
+            .flex(flex-start, center, row);
+            margin: 0 0 1.5rem 2.5rem;
+                .img-container {
+                padding-right: 10px;
+                border-right: 1px solid lightgrey;
+                height: 40px;
+                img {
+                    width: 40px;
+                }
+                }
+
+                span {
+                padding-left: 1.5rem;
+                font-size: 2rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: grey;
+                }
+            }
+
+            .article {
+                margin: 2rem 4rem 4rem 4rem;
+                color: rgb(56, 56, 56);
+                font-size: 2.5rem;
+            }
+        }
     }
 }
