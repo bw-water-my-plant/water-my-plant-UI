@@ -240,6 +240,11 @@ header .date-weather {
 .main-news-container .topics .topics::after {
   content: ‘’;
 }
+@media (min-width: 500px) {
+  .main-news-container .topics {
+    grid-template-columns: repeat(6, calc(30% - 40px)) 1rem;
+  }
+}
 .main-news-container .topics .tab {
   background-color: #1ba364;
   padding: 2rem 0.5rem;
@@ -248,6 +253,11 @@ header .date-weather {
   color: white;
   box-shadow: 2px 2px 5px #093521;
   text-align: center;
+}
+@media (min-width: 500px) {
+  .main-news-container .topics .tab {
+    padding: 1.5rem 1rem;
+  }
 }
 .main-news-container .topics .tab p {
   font-size: 2rem;

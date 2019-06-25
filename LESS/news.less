@@ -75,7 +75,13 @@ header {
 
         .topics::after {
             content: ‘’;
-          }
+        }
+
+        @media @tablet {
+            grid-template-columns: 
+            repeat(6, calc(30% - 40px))
+            1rem;
+        }
 
         .tab {
             background-color: @a-primary4;
@@ -85,7 +91,10 @@ header {
             color: white;
             box-shadow: 2px 2px 5px darken(@a-primary1, 10%);
             text-align: center;
-            // width: 15%;
+            
+            @media @tablet {
+                padding: 1.5rem 1rem;
+            }
 
             p {
                 font-size: 2rem;
