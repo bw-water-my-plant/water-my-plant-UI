@@ -222,4 +222,44 @@ header h1 {
   height: 100%;
   border: 1px red solid;
   padding-top: 10rem;
+  padding-top: 7rem;
+}
+.pagewide .wmpheader {
+  background-color: #faceaf;
+  height: 72.8rem;
+}
+.pagewide .wmpheader .wmpintrobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagewide .wmpheader .wmpintrobox .wmp {
+  color: #1ba364;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 3.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 6.3rem;
+}
+.pagewide .wmpheader .wmpintrobox .wmpslogan {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  color: #1ba364;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 5.6rem;
+  line-height: 2.5rem;
+}
+.pagewide .wmpheader .wmpintrobox .getstarted {
+  border-radius: 4px;
+  background-color: #7846c6;
+  border: none;
+  color: white;
+  width: 24.2rem;
+  height: 5.6rem;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 4.5rem;
 }
