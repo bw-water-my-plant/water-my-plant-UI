@@ -247,6 +247,48 @@ a {
   align-items: center;
 }
 .pagewide .buildgrow .buildgrowtitle {
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.9rem;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin-top: 7.9rem;
+  margin-bottom: 5rem;
+}
+.pagewide .buildgrow .buildgrow4 {
+  margin-top: 4.4rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 16rem;
+  margin-bottom: 10.3rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
+  margin-left: 0.9rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext {
+  display: flex;
+  flex-direction: column;
+  width: 59%;
+  align-items: center;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
+  font-size: 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 2.5rem;
+  width: 18rem;
+}
+.pagewide .userhighlight {
+  width: 200px;
+  height: 200px;
+  background: red;
+  transform: perspective(10px) rotateX(1deg);
+  margin: 50px;
 }
