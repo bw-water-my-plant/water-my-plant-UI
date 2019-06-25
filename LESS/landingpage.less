@@ -76,9 +76,9 @@
         .buildgrow4{
             margin-top: 4.4rem;
 
-            #lastbgbox{
-                margin-bottom: 1.3rem;
-            }
+            // #lastbgbox{
+            //     margin-bottom: 1.3rem;
+            // }
 
             .bgsmallbox{
                 display: flex;
@@ -96,6 +96,7 @@
                     flex-direction: column;
                     width: 59%;
                     align-items: center;
+                    margin-right: 12px;
 
                     .bgsmalltitle{
                         font-size: 2.5rem;
@@ -130,7 +131,7 @@
 
     .userhighlight{
         background-color: @a-secondary4;
-        height: 45.2rem;
+        height: 40.2rem;
         display: flex;
         flex-direction: column;
 
@@ -138,40 +139,89 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            padding-top: 2rem;
 
             .usertextbig{
                 width:40%;
-                font-size: 2.9rem;
-                font-family: 'Roboto', sans-serif;
+                font-size: 2.2rem;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+
+        }
+
+        .usertextname{
+            text-align: center;
+            margin-top: 3.5rem;
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+    }
+    
+    .resources{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+
+        .resourcetitle{
+            font-size: 2.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+            margin-top: 7rem;
+        }
+
+        .resource1{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+
+            .resourceimg{
+                margin-top: 5.7rem;
+                margin-bottom: 3.3rem;
+
+            }
+
+            .resourcep{
+                font-size: 2.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                text-align: center;
+                width: 74%;
             }
 
         }
 
     }
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+  
 
 
 }
 
 
-// .footer{
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @a-primary4;
+    height: 8rem;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 5px @a-primary1;
+    margin-top: 8rem;
+    
 
-// }
+    .footerlink{
+        text-decoration: none; 
+        color: white;
+        font-size: 1.7rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-left: 2.2rem;
+        margin-right: 2.2rem;
+        padding-top: 4.2rem;
+    }
+
+}
+
