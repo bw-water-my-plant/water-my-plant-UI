@@ -76,6 +76,10 @@
         .buildgrow4{
             margin-top: 4.4rem;
 
+            #lastbgbox{
+                margin-bottom: 1.3rem;
+            }
+
             .bgsmallbox{
                 display: flex;
                 flex-direction: row;
@@ -111,6 +115,8 @@
                     }
 
                 }
+
+                
             }
 
 
@@ -123,11 +129,23 @@
 
 
     .userhighlight{
-        width: 200px;
-        height: 200px;
-        background: red;
-        transform: perspective(10px) rotateX(1deg);
-        margin: 50px;
+        background-color: @a-secondary4;
+        height: 45.2rem;
+        display: flex;
+        flex-direction: column;
+
+        .imgwtext{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .usertextbig{
+                width:40%;
+                font-size: 2.9rem;
+                font-family: 'Roboto', sans-serif;
+            }
+
+        }
 
     }
     
