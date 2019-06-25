@@ -352,7 +352,12 @@ header .date-weather {
   flex-direction: column;
   align-items: center;
 }
-.pagewide .wmpheader .wmpintrobox .wmp {
+.pagewide .wmpheader .wmpintrobox .wmpmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
   color: #1ba364;
   text-align: center;
   font-size: 5rem;
@@ -360,7 +365,7 @@ header .date-weather {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 6.3rem;
 }
-.pagewide .wmpheader .wmpintrobox .wmpslogan {
+.pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
   color: #1ba364;
@@ -371,7 +376,7 @@ header .date-weather {
   margin-bottom: 5.6rem;
   line-height: 2.5rem;
 }
-.pagewide .wmpheader .wmpintrobox .getstarted {
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
   border-radius: 4px;
   background-color: #7846c6;
   border: none;
@@ -382,12 +387,141 @@ header .date-weather {
   font-family: 'Roboto', sans-serif;
   margin-top: 4.5rem;
 }
+.pagewide .wmpheader .wmpintrobox .yellowman {
+  display: none;
+}
+@media (min-width: 500px) {
+  .pagewide .wmpheader .wmpintrobox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pagewide .wmpheader .wmpintrobox .yellowman {
+    display: block;
+  }
+  .pagewide .wmpheader .wmpintrobox .greenman {
+    display: none;
+  }
+}
 .pagewide .buildgrow {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .pagewide .buildgrow .buildgrowtitle {
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.9rem;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin-top: 7.9rem;
+  margin-bottom: 5rem;
+}
+.pagewide .buildgrow .buildgrow4 {
+  margin-top: 4.4rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 16rem;
+  margin-bottom: 10.3rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
+  margin-left: 0.9rem;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext {
+  display: flex;
+  flex-direction: column;
+  width: 59%;
+  align-items: center;
+  margin-right: 12px;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
+  font-size: 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+.pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 2.5rem;
+  width: 18rem;
+}
+.pagewide .userhighlight {
+  background-color: #fac263;
+  height: 40.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.pagewide .userhighlight .imgwtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+.pagewide .userhighlight .imgwtext .usertextbig {
+  width: 40%;
+  font-size: 2.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.pagewide .userhighlight .usertextname {
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 1.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.pagewide .resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagewide .resources .resourcetitle {
+  font-size: 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 7rem;
+}
+.pagewide .resources .resource1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagewide .resources .resource1 .resourceimg {
+  margin-top: 5.7rem;
+  margin-bottom: 3.3rem;
+}
+.pagewide .resources .resource1 .resourcep {
+  font-size: 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  width: 74%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1ba364;
+  height: 8rem;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 5px #10613c;
+  margin-top: 8rem;
+}
+.footer .footerlink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: 2.2rem;
+  margin-right: 2.2rem;
+  padding-top: 4.2rem;
 }
