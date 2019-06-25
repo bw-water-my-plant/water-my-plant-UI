@@ -1,3 +1,79 @@
-.info {
-    color: red;
+.aboutUsHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p {
+        padding: 10% 0 10% 0;
+    }
+}
+
+.meetOurTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid @b-primary5;
+    background-color:@b-primary5;
+
+    .teamShowcase {
+        display: flex;
+        
+        .teamMember {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .info {
+                text-align: center;
+                margin: 10%;
+                border: solid @a-primary1;
+                background-color: @a-primary1;
+                border-radius: 10%;
+
+                p {
+                    padding: 3%;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: @a-primary1;
+        padding: 4% 0 8% 0;
+    }
+}
+
+.ourCoreValues {
+    
+    display: flex;
+    padding: 10% 0 10% 0;
+
+    .buildLearnGrow{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .coreValue {
+            display: flex;
+
+            .valueInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+            }
+        }
+    }
+
+    .coreValuesImg {
+        width: 50%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
 }
