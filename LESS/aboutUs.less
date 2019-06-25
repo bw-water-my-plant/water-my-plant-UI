@@ -1,20 +1,49 @@
+body {
+    @media(max-width: 500px){
+        width: 100%;
+
+    }
+}
+
 .aboutUsHeader {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 500px) {
+        background-color: red;
+        max-width: 100%;
+
+        img {
+            width: 350px;
+        }
+    }
+
+
 
     img {
         padding-top: 8%;
         max-width: 100%;
         background-color: @b-primary5;
+
+            @media (max-width: 500px){
+                width: 350px;
+            }
+        
     }
     
     p {
         padding: 10% 0 10% 0;
         font-size: 3rem;
         text-align: center;
+
+       @media (max-width: 500px) {
+           font-size: 1rem;
+           color: red;
+       }
     }
+
+    
 }
 
 .meetOurTeam {
@@ -123,6 +152,8 @@
                 padding-right: 8%;
             }
 
+            
+
             .valueInfo {
                 display: flex;
                 flex-direction: column;
@@ -151,3 +182,4 @@
         }
     }
 }
+
