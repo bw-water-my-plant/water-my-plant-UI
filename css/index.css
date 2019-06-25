@@ -211,7 +211,12 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.pagewide .wmpheader .wmpintrobox .wmp {
+.pagewide .wmpheader .wmpintrobox .wmpmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
   color: #1ba364;
   text-align: center;
   font-size: 5rem;
@@ -219,7 +224,7 @@ a {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 6.3rem;
 }
-.pagewide .wmpheader .wmpintrobox .wmpslogan {
+.pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
   color: #1ba364;
@@ -230,7 +235,7 @@ a {
   margin-bottom: 5.6rem;
   line-height: 2.5rem;
 }
-.pagewide .wmpheader .wmpintrobox .getstarted {
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
   border-radius: 4px;
   background-color: #7846c6;
   border: none;
@@ -240,6 +245,27 @@ a {
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
   margin-top: 4.5rem;
+}
+.pagewide .wmpheader .wmpintrobox .yellowman {
+  display: none;
+}
+@media (min-width: 500px) {
+  .pagewide .wmpheader .wmpintrobox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pagewide .wmpheader .wmpintrobox .yellowman {
+    display: block;
+  }
+  .pagewide .wmpheader .wmpintrobox .greenman {
+    display: none;
+  }
 }
 .pagewide .buildgrow {
   display: flex;

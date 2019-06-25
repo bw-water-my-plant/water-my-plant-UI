@@ -20,41 +20,84 @@
             flex-direction: column;
             align-items: center;
 
-            .wmp{
-                color:@a-primary4;
-                text-align: center;
-                font-size: 5rem;
-                margin-top: 3.5rem;
-                font-family: 'Josefin Sans', sans-serif;
-                line-height: 6.3rem;
+            .wmpmedia{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+
+                .wmp{
+                    color:@a-primary4;
+                    text-align: center;
+                    font-size: 5rem;
+                    margin-top: 3.5rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                    line-height: 6.3rem;
+                }
+    
+                .wmpslogan{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 2rem;
+                    color:@a-primary4;
+                    text-align: center;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    margin-top: 1.8rem;
+                    margin-bottom: 5.6rem;
+                    line-height: 2.5rem;
+                }
+    
+                .getstarted{
+                    border-radius: 4px;
+                    background-color:@safety4;
+                    border: none;
+                    color: white;
+                    width:24.2rem;
+                    height:5.6rem;
+                    font-size: 2.5rem;
+                    font-family: 'Roboto', sans-serif;
+                    margin-top: 4.5rem;
+    
+
+                }
+
+                
+
+            
             }
 
-            .wmpslogan{
-                font-family: 'Josefin Sans', sans-serif;
-                font-size: 2rem;
-                color:@a-primary4;
-                text-align: center;
-                margin-left: 2rem;
-                margin-right: 2rem;
-                margin-top: 1.8rem;
-                margin-bottom: 5.6rem;
-                line-height: 2.5rem;
-            }
-
-            .getstarted{
-                border-radius: 4px;
-                background-color:@safety4;
-                border: none;
-                color: white;
-                width:24.2rem;
-                height:5.6rem;
-                font-size: 2.5rem;
-                font-family: 'Roboto', sans-serif;
-                margin-top: 4.5rem;
-
+            .yellowman{
+                display: none;
             }
 
         }
+
+        @media @tablet{
+
+            .wmpintrobox{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+
+                .wmpmedia{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .yellowman{
+                    display: block;
+                }
+
+                .greenman{
+                    display: none;
+                }
+
+            }
+
+            
+        }
+
+
     }
 
     .buildgrow{
