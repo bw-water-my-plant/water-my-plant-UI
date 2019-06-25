@@ -218,6 +218,9 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.meetOurTeam .teamShowcase .teamMember img {
+  border-radius: 100%;
+}
 .meetOurTeam .teamShowcase .teamMember .info {
   text-align: center;
   margin: 10%;
