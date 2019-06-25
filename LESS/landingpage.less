@@ -20,41 +20,84 @@
             flex-direction: column;
             align-items: center;
 
-            .wmp{
-                color:@a-primary4;
-                text-align: center;
-                font-size: 5rem;
-                margin-top: 3.5rem;
-                font-family: 'Josefin Sans', sans-serif;
-                line-height: 6.3rem;
+            .wmpmedia{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+
+                .wmp{
+                    color:@a-primary4;
+                    text-align: center;
+                    font-size: 5rem;
+                    margin-top: 3.5rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                    line-height: 6.3rem;
+                }
+    
+                .wmpslogan{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 2rem;
+                    color:@a-primary4;
+                    text-align: center;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    margin-top: 1.8rem;
+                    margin-bottom: 5.6rem;
+                    line-height: 2.5rem;
+                }
+    
+                .getstarted{
+                    border-radius: 4px;
+                    background-color:@safety4;
+                    border: none;
+                    color: white;
+                    width:24.2rem;
+                    height:5.6rem;
+                    font-size: 2.5rem;
+                    font-family: 'Roboto', sans-serif;
+                    margin-top: 4.5rem;
+    
+
+                }
+
+                
+
+            
             }
 
-            .wmpslogan{
-                font-family: 'Josefin Sans', sans-serif;
-                font-size: 2rem;
-                color:@a-primary4;
-                text-align: center;
-                margin-left: 2rem;
-                margin-right: 2rem;
-                margin-top: 1.8rem;
-                margin-bottom: 5.6rem;
-                line-height: 2.5rem;
-            }
-
-            .getstarted{
-                border-radius: 4px;
-                background-color:@safety4;
-                border: none;
-                color: white;
-                width:24.2rem;
-                height:5.6rem;
-                font-size: 2.5rem;
-                font-family: 'Roboto', sans-serif;
-                margin-top: 4.5rem;
-
+            .yellowman{
+                display: none;
             }
 
         }
+
+        @media @tablet{
+
+            .wmpintrobox{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+
+                .wmpmedia{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .yellowman{
+                    display: block;
+                }
+
+                .greenman{
+                    display: none;
+                }
+
+            }
+
+            
+        }
+
+
     }
 
     .buildgrow{
@@ -63,44 +106,139 @@
         align-items: center;
 
         .buildgrowtitle{
-            font-size: 2.5rem;
+            text-align: center;
+            font-size: 2.9rem;
             font-family: 'Roboto', sans-serif;
-            margin-left: 2.4rem;
-            margin-right: 2.9rem;
+            width:100%;
+            // margin-left: 2.5rem;
+            // margin-right: 2.1rem;
+            margin-top: 7.9rem;
+            margin-bottom: 5rem;
         }
+        
+        .buildgrow4{
+            margin-top: 4.4rem;
+
+            // #lastbgbox{
+            //     margin-bottom: 1.3rem;
+            // }
+
+            .bgsmallbox{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 16rem;
+                margin-bottom: 10.3rem;
+
+                .bg1img{
+                    margin-left: 0.9rem;
+                }
+
+                .bgtext{
+                    display: flex;
+                    flex-direction: column;
+                    width: 59%;
+                    align-items: center;
+                    margin-right: 12px;
+
+                    .bgsmalltitle{
+                        font-size: 2.5rem;
+                        font-family: 'Josefin Sans', sans-serif;
+                        text-align: center;
+
+                    }
+
+                    .bgsmallp{
+                        text-align: center;
+                        font-size: 1.2rem;
+                        font-family: 'Josefin Sans', sans-serif;
+                        
+                        line-height: 2.5rem;
+                        width:18rem;
+
+                    }
+
+                }
+
+                
+            }
+
+
 
         }
+        
 
-
-
+        
     }
 
 
+    .userhighlight{
+        background-color: @a-secondary4;
+        height: 40.2rem;
+        display: flex;
+        flex-direction: column;
 
+        .imgwtext{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 2rem;
 
+            .usertextbig{
+                width:40%;
+                font-size: 2.2rem;
+                font-family: 'Josefin Sans', sans-serif;
+            }
 
+        }
 
+        .usertextname{
+            text-align: center;
+            margin-top: 3.5rem;
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
     
+    .resources{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
 
+        .resourcetitle{
+            font-size: 2.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+            margin-top: 7rem;
+        }
+
+        .resource1{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+
+            .resourceimg{
+                margin-top: 5.7rem;
+                margin-bottom: 3.3rem;
+
+            }
+
+            .resourcep{
+                font-size: 2.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                text-align: center;
+                width: 74%;
+            }
+
+        }
+
+    }
+
+  
 
 
 }
 
 
-// .footer{
 
-// }
