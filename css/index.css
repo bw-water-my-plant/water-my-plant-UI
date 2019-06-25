@@ -200,6 +200,11 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.aboutUsHeader img {
+  padding-top: 8%;
+  max-width: 100%;
+  background-color: #fcddc7;
+}
 .aboutUsHeader p {
   padding: 10% 0 10% 0;
   font-size: 3rem;
