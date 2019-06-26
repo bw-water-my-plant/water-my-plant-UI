@@ -61,6 +61,7 @@ body {
             
             display: flex;
             padding-bottom: 5%;
+            justify-content: space-evenly;
 
             @media @phoneAboutUS {
                 flex-direction: column;
@@ -69,9 +70,11 @@ body {
 
             .teamMember {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                // border: solid;
+                border: solid @a-primary1;
+                background-color: @a-primary1;
+                border-radius: 10%;
+                max-width: 30%;
+                
 
                 @media @phoneAboutUS {
                     flex-direction: row;
@@ -82,14 +85,11 @@ body {
                     img {
                         border-radius: 100%;
                         padding-bottom: 5%;
+                        padding-top: 5%;
                     }
     
                 .info {
                     text-align: center;
-                    // margin: 10%;
-                    border: solid @a-primary1;
-                    background-color: @a-primary1;
-                    border-radius: 10%;
                     max-width: 33%;
     
                     p {
@@ -98,12 +98,16 @@ body {
                         font-size: 1rem;
                     }
                 }
+
+                
             }
         }
 
         .bottomHalfTeam {
             
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
 
             @media @phoneAboutUS {
                 flex-direction: column;
@@ -113,9 +117,10 @@ body {
 
             .teamMember {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                // border: solid;
+                border: solid @a-primary1;
+                background-color: @a-primary1;
+                border-radius: 10%;
+                max-width: 30%;
                 
                 @media @phoneAboutUS {
                     flex-direction: row;
@@ -130,10 +135,6 @@ body {
     
                 .info {
                     text-align: center;
-                    // margin: 10%;
-                    border: solid @a-primary1;
-                    background-color: @a-primary1;
-                    border-radius: 10%;
                     max-width: 33%;
     
                     p {
@@ -144,6 +145,7 @@ body {
                 }
             }
         }
+        
         
     }
 

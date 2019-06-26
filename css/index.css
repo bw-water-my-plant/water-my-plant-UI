@@ -247,6 +247,7 @@ a {
 .meetOurTeam .teamShowcase .topHalfTeam {
   display: flex;
   padding-bottom: 5%;
+  justify-content: space-evenly;
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .topHalfTeam {
@@ -256,8 +257,10 @@ a {
 }
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: solid #10613c;
+  background-color: #10613c;
+  border-radius: 10%;
+  max-width: 30%;
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
@@ -268,12 +271,10 @@ a {
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember img {
   border-radius: 100%;
   padding-bottom: 5%;
+  padding-top: 5%;
 }
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember .info {
   text-align: center;
-  border: solid #10613c;
-  background-color: #10613c;
-  border-radius: 10%;
   max-width: 33%;
 }
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember .info p {
@@ -283,6 +284,8 @@ a {
 }
 .meetOurTeam .teamShowcase .bottomHalfTeam {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .bottomHalfTeam {
@@ -292,8 +295,10 @@ a {
 }
 .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: solid #10613c;
+  background-color: #10613c;
+  border-radius: 10%;
+  max-width: 30%;
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
@@ -307,9 +312,6 @@ a {
 }
 .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info {
   text-align: center;
-  border: solid #10613c;
-  background-color: #10613c;
-  border-radius: 10%;
   max-width: 33%;
 }
 .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info p {
