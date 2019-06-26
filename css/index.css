@@ -303,6 +303,7 @@ a {
     font-size: 10rem;
     margin-top: 0;
     line-height: 12rem;
+    margin-left: 1%;
   }
   .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
     font-size: 3.5rem;
@@ -311,15 +312,17 @@ a {
     margin: 0;
     margin-top: 0px;
     margin-top: 17px;
+    width: 100%;
   }
   .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
-    margin-top: 4rem;
+    margin-top: 11%;
     height: 8rem;
     width: 34.4rem;
   }
   .pagewide .wmpheader .wmpintrobox .yellowman {
     height: 73.07rem;
     margin-top: 8rem;
+    width: 47%;
   }
 }
 .pagewide .buildgrow {
@@ -413,23 +416,27 @@ a {
     margin-top: 10.9rem;
     font-size: 4rem;
     line-height: 4.5rem;
-    width: 90rem;
+    width: 70%;
   }
   .pagewide .buildgrow .buildgrow4 {
     width: 100%;
     justify-content: space-evenly;
     margin-top: 6.3rem;
   }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox {
+    width: 23%;
+  }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
     max-height: 20rem;
-    width: 27rem;
+    width: 100%;
     margin-bottom: 16px;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
     font-size: 2.5rem;
+    width: 100%;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
-    width: 255px;
+    width: 100%;
     font-size: 18px;
     line-height: 2rem;
     margin-top: 2.6rem;
@@ -492,7 +499,7 @@ a {
     margin-left: 4rem;
   }
   .pagewide .userhighlight .usertextname {
-    margin-top: -7.1rem;
+    margin-top: -1.1rem;
     margin-left: -58.2rem;
     font-size: 2.3rem;
   }
@@ -544,6 +551,24 @@ a {
   .pagewide .resources .resource1 .resourcep {
     width: 100%;
     padding-top: 2.8rem;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .resources {
+    height: 61.5rem;
+    justify-content: space-evenly;
+  }
+  .pagewide .resources .resource1 {
+    align-items: center;
+  }
+  .pagewide .resources .resource1 .resourceimg {
+    height: 200px;
+    width: 100%;
+    margin-top: 5.7rem;
+  }
+  .pagewide .resources .resource1 .resourcep {
+    width: 383px;
+    font-size: 3.5rem;
   }
 }
 .footer {
