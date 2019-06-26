@@ -350,8 +350,9 @@ header .date-weather {
 }
 @media (min-width: 1000px) {
   .main-news-container .cards-container .card {
-    width: 47%;
+    width: 30%;
     margin: 1rem;
+    max-width: 75rem;
   }
 }
 .main-news-container .cards-container .card .headline {
@@ -369,6 +370,11 @@ header .date-weather {
   background-image: linear-gradient(black, white);
   mix-blend-mode: multiply;
   border-radius: 2rem 2rem 0 0;
+}
+@media (min-width: 1000px) {
+  .main-news-container .cards-container .card h3 {
+    font-size: 2rem;
+  }
 }
 .main-news-container .cards-container .card .article-content {
   background-color: white;
@@ -396,6 +402,11 @@ header .date-weather {
   font-weight: bold;
   color: grey;
 }
+@media (min-width: 1000px) {
+  .main-news-container .cards-container .card .author span {
+    font-size: 1.3rem;
+  }
+}
 .main-news-container .cards-container .card .article {
   margin: 2rem 4rem 4rem 4rem;
   color: #383838;
@@ -405,6 +416,11 @@ header .date-weather {
   .main-news-container .cards-container .card .article {
     max-height: 8rem;
     overflow: hidden;
+  }
+}
+@media (min-width: 1000px) {
+  .main-news-container .cards-container .card .article {
+    font-size: 1.6rem;
   }
 }
 .bordermixin {

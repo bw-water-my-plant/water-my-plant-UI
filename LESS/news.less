@@ -176,8 +176,9 @@ header {
           box-shadow: 8px 8px 10px @b-primary4;
           
             @media (min-width: 1000px) {
-                width: 47%;
+                width: 30%;
                 margin: 1rem;
+                max-width: 75rem;
                 // max-height: 50rem;
                 // overflow-y: hidden;
             }
@@ -205,25 +206,29 @@ header {
                 // opacity: .2;
             }
 
+            h3 {
+                @media (min-width: 1000px) {
+                    font-size: 2rem;
+                }
+            }
+
             .article-content {
                 background-color: white;
                 border-radius: 0 0 2rem 2rem;
-
-                // @media @desktop {
-                //     display: none;
-                // }
             }
 
           .author {
             .flex(flex-start, center, row);
             margin: 0 0 1.5rem 2.5rem;
+
                 .img-container {
-                padding-right: 10px;
-                border-right: 1px solid lightgrey;
-                height: 40px;
-                img {
-                    width: 40px;
-                }
+                    padding-right: 10px;
+                    border-right: 1px solid lightgrey;
+                    height: 40px;
+                    
+                    img {
+                        width: 40px;
+                    }
                 }
 
                 span {
@@ -232,6 +237,10 @@ header {
                 letter-spacing: 1px;
                 font-weight: bold;
                 color: grey;
+
+                @media (min-width: 1000px) {
+                    font-size: 1.3rem;
+                }
                 }
             }
 
@@ -243,6 +252,10 @@ header {
                 @media @desktop {
                     max-height: 8rem;
                     overflow: hidden;
+                }
+
+                @media (min-width: 1000px) {
+                    font-size: 1.6rem;
                 }
             }
         }
