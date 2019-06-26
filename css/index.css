@@ -270,7 +270,7 @@ a {
   .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
     text-align: center;
     font-size: 1.8rem;
-    width: 80%;
+    width: 60rem;
     margin-top: 1.8rem;
     margin-bottom: 2.2rem;
     line-height: 2.5rem;
@@ -280,6 +280,7 @@ a {
     height: 5.6rem;
     font-size: 2.5rem;
     margin-top: 0rem;
+    font-size: 3.6rem;
   }
   .pagewide .wmpheader .wmpintrobox .yellowman {
     display: block;
@@ -289,6 +290,36 @@ a {
   }
   .pagewide .wmpheader .wmpintrobox .greenman {
     display: none;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .wmpheader {
+    height: 88rem;
+  }
+  .pagewide .wmpheader .wmpintrobox {
+    height: 100%;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
+    font-size: 10rem;
+    margin-top: 0;
+    line-height: 12rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 4.5rem;
+    margin: 0;
+    margin-top: 0px;
+    margin-top: 17px;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
+    margin-top: 4rem;
+    height: 8rem;
+    width: 34.4rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .yellowman {
+    height: 73.07rem;
+    margin-top: 8rem;
   }
 }
 .pagewide .buildgrow {
@@ -374,6 +405,36 @@ a {
     line-height: 1.5rem;
   }
 }
+@media (min-width: 800px) {
+  .pagewide .buildgrow {
+    height: 770px;
+  }
+  .pagewide .buildgrow .buildgrowtitle {
+    margin-top: 10.9rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    width: 90rem;
+  }
+  .pagewide .buildgrow .buildgrow4 {
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 6.3rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
+    max-height: 20rem;
+    width: 27rem;
+    margin-bottom: 16px;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
+    font-size: 2.5rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
+    width: 255px;
+    font-size: 18px;
+    line-height: 2rem;
+    margin-top: 2.6rem;
+  }
+}
 .pagewide .userhighlight {
   background-color: #fac263;
   height: 40.2rem;
@@ -413,6 +474,27 @@ a {
   .pagewide .userhighlight .usertextname {
     margin-top: -1.8rem;
     margin-left: -29.2rem;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .userhighlight {
+    height: 69rem;
+  }
+  .pagewide .userhighlight .imgwtext .userimg {
+    margin-top: 32px;
+    margin-right: 6%;
+    height: 54.2rem;
+  }
+  .pagewide .userhighlight .imgwtext .usertextbig {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-top: 4.2rem;
+    margin-left: 4rem;
+  }
+  .pagewide .userhighlight .usertextname {
+    margin-top: -7.1rem;
+    margin-left: -58.2rem;
+    font-size: 2.3rem;
   }
 }
 .pagewide .resources {
