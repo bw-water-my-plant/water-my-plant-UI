@@ -164,8 +164,25 @@ body {
         flex-direction: column;
         align-items: center;
 
+        @media @phoneAboutUS {
+            width: 100%;
+            justify-content: center;
+        }
+
         .coreValue {
             display: flex;
+
+            @media @phoneAboutUS {
+                width: 100%;
+                flex-direction: row;
+
+                img {
+                    padding: 0 0 0 0%;
+                    
+                }
+
+                
+            }
 
             img {
                 padding-right: 8%;
@@ -182,6 +199,18 @@ body {
                 h4 {
                     padding-bottom: 5%;
                 }
+
+                @media @phoneAboutUS {
+                    width: 100%;
+                    padding: 8% 0 0 0;
+
+                    p {
+                        font-size: 1rem;
+                        padding: 0% 5% 0 0;
+                        text-align: center;
+                    }
+
+                }
             }
         }
 
@@ -189,15 +218,34 @@ body {
             padding-bottom: 10%;
             color: @a-primary1;
         }
+
+
+        .learnValue {
+
+            @media @phoneAboutUS {
+                padding: 5% 0 0 0;
+            }
+        }
     }
 
 
     .coreValuesImg {
         width: 50%;
 
+        @media @phoneAboutUS {
+            width: 0%;
+        }
+
         img {
             max-width: 100%;
             max-height: 100%;
+
+            @media @phoneAboutUS {
+                display: none;
+
+                max-width: 0%;
+                max-height: 0%;
+            }
         }
     }
 }
