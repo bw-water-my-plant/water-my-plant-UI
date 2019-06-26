@@ -1,5 +1,8 @@
 @import 'variables.less';
 
+
+// Header contains the title and potentially the weather/clock widget
+
 header {
     width: 100%;
     height: 20rem;
@@ -24,7 +27,7 @@ header {
         // top: 61%;
         // left: 18%;
         // right: 15%;
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         font-family: @josefin;
         // display: none;
         padding-bottom: 2rem;
@@ -41,8 +44,12 @@ header {
         display: none;
     }
 }
+ 
+
+// Main news container has everything else save for the footer
 
 .main-news-container {
+
     // the tabs banner to select a news topic
     width: 100%;
     background-color: @b-primary6;
@@ -77,8 +84,9 @@ header {
             width: 35rem;
             border-radius: 4rem;
             position: fixed;
-            left: -23rem;
-            margin-top: -6.5rem;
+            top: 15rem;
+            left: -25rem;
+            // margin-top: -6.5rem;
             z-index: 6;
             box-shadow: 2px 2px 5px darken(@a-primary1, 20%);
             opacity: .5;
@@ -87,6 +95,7 @@ header {
             
         }
 
+        // the "filter" button that appears between tablet and desktop view
         .menu-button {
             position: relative;
             z-index: 7;
@@ -109,15 +118,24 @@ header {
 
         }
 
+        // the actual tab itself
         .tab {
             background-color: @a-primary4;
-            padding: 2rem .5rem;
+            padding: 1rem .5rem;
             // border: 1px solid @a-secondary2;
             border-radius: 1rem;
             color: white;
             box-shadow: 2px 2px 5px darken(@a-primary1, 10%);
             text-align: center;
             cursor: pointer;
+
+            &:active {
+                background-color: @b-primary1;
+                transform: translateY(10px);
+                box-shadow: 0 0 10px @a-secondary4;
+                // border: 1px solid darken(@b-primary1, 20%);
+                font-weight: 500;
+            }
             
             @media @tablet {
                 // padding: 1.5rem 1rem;
@@ -134,11 +152,27 @@ header {
                 font-size: 2rem;
                 font-family: @josefin;
 
+                &:active {
+                    font-weight: 500;
+                }
+
                 @media @desktop {
                     font-size: 3rem;
                     padding-right: 3rem;
                 }
             }
+        }
+
+        // the class that controls how the currently-selected tab appears
+        .active-tab {
+
+            p {
+                color: black;
+            }
+
+            background-color: @a-secondary2;
+            color: black;
+            // border: 2px solid black;
         }
     }
 
@@ -151,6 +185,13 @@ header {
         height: 10rem;
         border: 1px solid teal;
         margin: 2rem 0;
+        display: none;
+    }
+
+    .newsfeed {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
 
     // the news articles
@@ -171,7 +212,7 @@ header {
           .flex(space-between, none, column);
           background-image:linear-gradient(white, @b-primary3, @b-primary3);
           width: 100%;
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
           border-radius: 2rem;
           box-shadow: 8px 8px 10px @b-primary4;
           
@@ -183,6 +224,12 @@ header {
                 // overflow-y: hidden;
             }
 
+            .article-content {
+                background-color: white;
+                border-radius: 0 0 2rem 2rem;
+                .flex(space-around, center, column);
+            }
+
             .headline {
                 position: relative;
                 z-index: 5;
@@ -191,7 +238,7 @@ header {
                 // margin: -20rem 2rem 0 2rem;
                 color: black;
                 // border: 2px red solid;
-                padding: 1rem 3rem;
+                padding: 1rem 2rem;
                 font-weight: 500;
                 padding-bottom: 1rem;
             }
@@ -207,14 +254,11 @@ header {
             }
 
             h3 {
+
+                font-size: 2.75rem;
                 @media (min-width: 1000px) {
                     font-size: 2rem;
                 }
-            }
-
-            .article-content {
-                background-color: white;
-                border-radius: 0 0 2rem 2rem;
             }
 
           .author {
@@ -233,7 +277,7 @@ header {
 
                 span {
                 padding-left: 1.5rem;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 letter-spacing: 1px;
                 font-weight: bold;
                 color: grey;
@@ -245,9 +289,9 @@ header {
             }
 
             .article {
-                margin: 2rem 4rem 4rem 4rem;
+                margin: 2rem;
                 color: rgb(56, 56, 56);
-                font-size: 2.5rem;
+                font-size: 2rem;
 
                 @media @desktop {
                     max-height: 8rem;
@@ -259,5 +303,59 @@ header {
                 }
             }
         }
+
+        #myBtn {
+            color: @a-primary4;
+            margin-bottom: 3rem;
+            background-color: white;
+            font-size: 2rem;
+            border: 0;
+            width: 70%;
+            box-shadow: -1rem -2rem 4rem 4rem white;
+            cursor: pointer;
+
+            &:hover {
+                color: @a-secondary2;
+            }
+        }
     }
+
+    // Modal articles
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 11; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    // Modal content box
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        border-radius: 1rem;
+    }
+
+    // Close button
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
 }
