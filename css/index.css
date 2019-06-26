@@ -206,7 +206,6 @@ a {
 }
 @media (max-width: 500px) {
   .aboutUsHeader {
-    background-color: red;
     max-width: 100%;
   }
   .aboutUsHeader img {
@@ -220,7 +219,8 @@ a {
 }
 @media (max-width: 500px) {
   .aboutUsHeader img {
-    width: 350px;
+    width: 100%;
+    padding-top: 20%;
   }
 }
 .aboutUsHeader p {
@@ -230,8 +230,7 @@ a {
 }
 @media (max-width: 500px) {
   .aboutUsHeader p {
-    font-size: 1rem;
-    color: red;
+    font-size: 1.4rem;
   }
 }
 .meetOurTeam {
@@ -249,10 +248,22 @@ a {
   display: flex;
   padding-bottom: 5%;
 }
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .topHalfTeam {
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+  }
+}
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .meetOurTeam .teamShowcase .topHalfTeam .teamMember img {
   border-radius: 100%;
@@ -273,10 +284,22 @@ a {
 .meetOurTeam .teamShowcase .bottomHalfTeam {
   display: flex;
 }
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .bottomHalfTeam {
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+  }
+}
 .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember img {
   border-radius: 100%;

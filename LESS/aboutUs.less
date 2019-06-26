@@ -11,7 +11,6 @@ body {
     align-items: center;
 
     @media (max-width: 500px) {
-        background-color: red;
         max-width: 100%;
 
         img {
@@ -27,7 +26,8 @@ body {
         background-color: @b-primary5;
 
             @media (max-width: 500px){
-                width: 350px;
+                width: 100%;
+                padding-top: 20%;
             }
         
     }
@@ -38,8 +38,7 @@ body {
         text-align: center;
 
        @media (max-width: 500px) {
-           font-size: 1rem;
-           color: red;
+           font-size: 1.4rem;
        }
     }
 
@@ -63,11 +62,21 @@ body {
             display: flex;
             padding-bottom: 5%;
 
+            @media @phoneAboutUS {
+                flex-direction: column;
+                padding: 0 5% 0 5%
+            }
+
             .teamMember {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 // border: solid;
+
+                @media @phoneAboutUS {
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                }
                 
     
                     img {
@@ -95,6 +104,11 @@ body {
         .bottomHalfTeam {
             
             display: flex;
+
+            @media @phoneAboutUS {
+                flex-direction: column;
+                padding: 0 5% 0 5%
+            }
             
 
             .teamMember {
@@ -103,6 +117,11 @@ body {
                 align-items: center;
                 // border: solid;
                 
+                @media @phoneAboutUS {
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                }
     
                     img {
                         border-radius: 100%;
