@@ -514,6 +514,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 8rem;
 }
 .pagewide .resources .resourcetitle {
   font-size: 2.5rem;
