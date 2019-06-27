@@ -196,7 +196,7 @@ a {
 }
 @media (max-width: 500px) {
   body {
-    width: 100%;
+    max-width: 100%;
   }
 }
 .aboutUsHeader {
@@ -264,6 +264,7 @@ a {
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
+    min-width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -302,6 +303,7 @@ a {
 }
 @media (max-width: 500px) {
   .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
+    min-width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
   }
