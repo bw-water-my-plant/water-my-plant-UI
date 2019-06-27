@@ -353,6 +353,97 @@
         background-color: @a-secondary4;
         height: 40.2rem;
         
+    
+        .userhighlight{
+            display: flex;
+            flex-direction: column;
+            display: none;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+
+            .imgwtext{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-top: 2rem;
+
+                .userimg{
+                    height: 100%;
+                    width: auto;
+                }
+
+                .usertextbig{
+                    width:40%;
+                    font-size: 2.2rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+            }
+
+            .usertextname{
+                text-align: center;
+                margin-top: 5%;
+                font-size: 1.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+
+
+            @media @tablet{
+
+                .imgwtext{
+                    flex-direction: row-reverse;
+
+                    // .userimg{
+                    //     width:26%;
+                    // }
+
+                    .usertextbig{
+                        width:34%;
+                        font-size: 2.6rem;
+                        line-height: 3rem;
+                        margin-top: 12px;
+
+                    }
+                }
+
+                .usertextname{
+                    // margin-top: -1.8rem;
+                    margin-left: -29.2rem;
+                }
+                
+            }
+
+
+            @media @desktop{
+                height: 69rem;
+
+                .imgwtext{
+                    .userimg{
+                        margin-top: 32px;
+                        margin-right: 6%;
+                        // height: 54.2rem;
+                    }
+                    .usertextbig{
+                        font-size: 4.5rem;
+                        line-height: 5.0rem;
+                        margin-top: 4.2rem;
+                        margin-left: 4rem;
+                    }
+                }
+
+                .usertextname{
+                    margin-top: -1.1rem;
+                    margin-left: -58.2rem;
+                    font-size: 2.3rem;
+                }
+
+            }
+
+        }
+
         .prev, .next{
             cursor: pointer;
             position: absolute;
@@ -377,91 +468,44 @@
             background-color: @a-secondary1;
         }
 
-    
-        .userhighlight{
-            display: flex;
-            flex-direction: column;
-            display: none;
-
-
-            .imgwtext{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                padding-top: 2rem;
-
-                .usertextbig{
-                    width:40%;
-                    font-size: 2.2rem;
-                    font-family: 'Josefin Sans', sans-serif;
-                }
-
-            }
-
-            .usertextname{
-                text-align: center;
-                margin-top: 3.5rem;
-                font-size: 1.5rem;
-                font-family: 'Josefin Sans', sans-serif;
-            }
-
-
-            @media @tablet{
-
-                .imgwtext{
-                    flex-direction: row-reverse;
-
-                    .userimg{
-                        width:26%;
-                    }
-
-                    .usertextbig{
-                        width:34%;
-                        font-size: 2.6rem;
-                        line-height: 3rem;
-                        margin-top: 12px;
-
-                    }
-                }
-
-                .usertextname{
-                    margin-top: -1.8rem;
-                    margin-left: -29.2rem;
-                }
-                
-            }
-
-
-            @media @desktop{
-                height: 69rem;
-
-                .imgwtext{
-                    .userimg{
-                        margin-top: 32px;
-                        margin-right: 6%;
-                        height: 54.2rem;
-                    }
-                    .usertextbig{
-                        font-size: 4.5rem;
-                        line-height: 5.0rem;
-                        margin-top: 4.2rem;
-                        margin-left: 4rem;
-                    }
-                }
-
-                .usertextname{
-                    margin-top: -1.1rem;
-                    margin-left: -58.2rem;
-                    font-size: 2.3rem;
-                }
-
-            }
-
+        .dot{
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
         }
-
+      
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        
+    
+        /* Fading animation */
+        .fade{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+      
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+      
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
     }
+   
+    /*
 
-    /* The dots/bullets/indicators */
+    /* The dots/bullets/indicators 
     .dot{
         cursor: pointer;
         height: 15px;
@@ -476,9 +520,9 @@
     .active, .dot:hover {
         background-color: #717171;
     }
-    
+    */
 
-    /* Fading animation */
+    /* Fading animation */ /*
     .fade{
         -webkit-animation-name: fade;
         -webkit-animation-duration: 1.5s;
@@ -495,7 +539,7 @@
         from {opacity: .4}
         to {opacity: 1}
     }
-
+    */
 
 
 
