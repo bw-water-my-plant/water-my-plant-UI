@@ -11,29 +11,48 @@ TweenMax.fromTo(animMenu, 1, {x:50}, {x:0});
 
 /* --------------------------------- MODAL CONTENT ------------------------------------ */
 
-// collect modal articles and buttons
-const modal = document.getElementById("myModal");
-const btn = document.getElementById("myBtn");
-
-// The close (x) button in the corner
-const span = document.getElementsByClassName("close")[0];
-
-// Click button, turn on modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// Click (x), turn off modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+// an IIFE, which runs this function automatically and protects it from being accessed by other things
+(function iife() {
+  // use strict does ots of thing, such as preventing access to global vars unless explicitly defined
+  "use strict";
+  function closestEl(el, selector) {
+      var doc = el.document || el.ownerDocument;
+      var matches = doc.querySelectorAll(selector);
+      var i;
+      while (el) {
+          i = matches.length - 1;
+          while (i >= 0) {
+              if (matches.item(i) === el) {
+                  return el;
+              }
+              i -= 1;
+          }
+          el = el.parentElement;
+      }
+      return el;
   }
-}
+  var modalBtns = document.querySelectorAll(".myBtn");
+  modalBtns.forEach(function addBtnClickEvent(btn) {
+      btn.onclick = function showModal() {
+          var modal = btn.getAttribute("data-modal");
+          document.getElementById(modal).style.display = "block";
+      };
+  });
+
+  var closeBtns = document.querySelectorAll(".close");
+  closeBtns.forEach(function addCloseClickEvent(btn) {
+      btn.onclick = function closeModal() {
+          var modal = closestEl(btn, ".modal");
+          modal.style.display = "none";
+      };
+  });
+
+  window.onclick = function closeOnClick(event) {
+      if (event.target.className === "modal") {
+          event.target.style.display = "none";
+      }
+  };
+}());
 
 
 /* --------------------------------- FILTER TABS AND CARDS ------------------------------------ */
@@ -99,7 +118,7 @@ class TabLink {
       this.original.classList.add('active-tab');
       // adds the active-intro class to the pre-selected div that's passed in (active-intro has display: flex)
       this.intros.classList.add('active-intro');
-      
+
       // runs certain cards through a function to display them (it will only have caught SOME cards due to if/else statement earlier)
       this.cards.forEach(card => card.selectCard());
     }
@@ -121,18 +140,6 @@ class TabCard { // makes fancy new cards that react to tabs
 
 let tabs = document.querySelectorAll('.tab');
 tabs.forEach((oldTab) => new TabLink(oldTab));
-
-
-// function changeBlurb (a) {
-//   if ((a.innerText = "Garden Tips") && (a.classList.contains("active-tab"))) {
-//     return topBlurb.textContent = "Wahoo"
-//   } else if ((a.innerText = "News") && (a.classList.contains("active-tab"))) {
-//     return topBlurb.textContent = "YAYYYY"
-//   }
-
-// }
-
-// tabs.forEach(a => a.addEventListener('click', changeBlurb))
 
 
 
