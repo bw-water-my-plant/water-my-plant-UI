@@ -571,6 +571,13 @@ header .date-weather {
   line-height: 5.6rem;
   text-align: center;
 }
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted:hover {
+  background-color: #8659cc;
+  box-shadow: 0px 10px 15px rgba(120, 70, 198, 0.4);
+}
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted:active {
+  background-color: #6033a6;
+}
 .pagewide .wmpheader .wmpintrobox .yellowman {
   display: none;
 }
