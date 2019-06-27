@@ -16,7 +16,7 @@ header {
 }
 header h1 {
   color: white;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-bottom: 2rem;
 }
@@ -31,7 +31,9 @@ header .date-weather {
 }
 .main-news-container {
   width: 100%;
+  height: 100%;
   background-color: #fdebdf;
+  padding-bottom: 4rem;
 }
 .main-news-container .topics {
   display: grid;
@@ -53,18 +55,10 @@ header .date-weather {
 }
 @media (min-width: 800px) {
   .main-news-container .topics {
-    grid-template: none;
-    grid-auto-rows: 1fr;
-    grid-row-gap: 1rem;
-    width: 35rem;
-    border-radius: 4rem;
-    position: fixed;
-    top: 15rem;
-    left: -25rem;
+    grid-template-columns: repeat(6, auto);
+    grid-row-gap: .5rem;
     z-index: 6;
     box-shadow: 2px 2px 5px #020906;
-    opacity: .5;
-    transition: opacity 4s ease;
     overflow: hidden;
   }
 }
@@ -83,13 +77,8 @@ header .date-weather {
   padding: 2rem;
   padding-right: 3rem;
 }
-@media (min-width: 800px) {
-  .main-news-container .topics .menu-button {
-    display: grid;
-  }
-}
 .main-news-container .topics .tab {
-  background-color: #1ba364;
+  background-color: #178d57;
   padding: 1rem .5rem;
   border-radius: 1rem;
   color: white;
@@ -110,9 +99,7 @@ header .date-weather {
 }
 @media (min-width: 800px) {
   .main-news-container .topics .tab {
-    text-align: right;
-    border-radius: 4rem;
-    display: none;
+    padding: 1rem;
   }
 }
 .main-news-container .topics .tab p {
@@ -124,8 +111,7 @@ header .date-weather {
 }
 @media (min-width: 800px) {
   .main-news-container .topics .tab p {
-    font-size: 3rem;
-    padding-right: 3rem;
+    font-size: 2rem;
   }
 }
 .main-news-container .topics .active-tab {
@@ -149,6 +135,24 @@ header .date-weather {
   flex-flow: column nowrap;
   align-items: center;
 }
+.main-news-container .newsfeed .top-section {
+  display: none;
+}
+.main-news-container .newsfeed .top-section h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 2rem;
+  color: #592805;
+  text-align: center;
+}
+.main-news-container .newsfeed .top-section p {
+  margin: 1rem;
+  max-width: 100rem;
+  color: #713207;
+}
+.main-news-container .newsfeed .active-intro {
+  display: flex;
+  flex-flow: column nowrap;
+}
 .main-news-container .cards-container {
   display: flex;
   justify-content: center;
@@ -157,6 +161,9 @@ header .date-weather {
   width: 100%;
   margin-top: 2rem;
   flex-wrap: wrap;
+  border-top: 1px solid #f7b17f;
+  border-bottom: 1px solid #f7b17f;
+  padding-top: 3rem;
 }
 @media (min-width: 800px) {
   .main-news-container .cards-container {
@@ -172,7 +179,7 @@ header .date-weather {
   background-image: linear-gradient(white, #f9bf97, #f9bf97);
   width: 100%;
   margin-bottom: 3rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   box-shadow: 8px 8px 10px #faceaf;
 }
 @media (min-width: 1000px) {
@@ -184,7 +191,7 @@ header .date-weather {
 }
 .main-news-container .cards-container .card .article-content {
   background-color: white;
-  border-radius: 0 0 2rem 2rem;
+  border-radius: 0 0 1rem 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -204,7 +211,7 @@ header .date-weather {
   object-fit: cover;
   background-image: linear-gradient(black, white);
   mix-blend-mode: multiply;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 .main-news-container .cards-container .card h3 {
   font-size: 2.75rem;
@@ -264,7 +271,7 @@ header .date-weather {
   font-size: 2rem;
   border: 0;
   width: 70%;
-  box-shadow: -1rem -2rem 4rem 4rem white;
+  box-shadow: 0rem -2rem 4rem 4rem white;
   cursor: pointer;
 }
 .main-news-container .cards-container #myBtn:hover {
@@ -292,13 +299,15 @@ header .date-weather {
 }
 .main-news-container .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10rem auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+  max-width: 100rem;
   border-radius: 1rem;
+  max-height: 80%;
 }
 .main-news-container .close {
   color: #aaa;

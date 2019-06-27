@@ -27,7 +27,7 @@ header {
         // top: 61%;
         // left: 18%;
         // right: 15%;
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-family: @josefin;
         // display: none;
         padding-bottom: 2rem;
@@ -52,7 +52,9 @@ header {
 
     // the tabs banner to select a news topic
     width: 100%;
+    height: 100%;
     background-color: @b-primary6;
+    padding-bottom: 4rem;
 
     .topics {
         display: grid;
@@ -78,19 +80,20 @@ header {
         }
 
         @media @desktop {
-            grid-template: none;
-            grid-auto-rows: 1fr;
-            grid-row-gap: 1rem;
-            width: 35rem;
-            border-radius: 4rem;
-            position: fixed;
-            top: 15rem;
-            left: -25rem;
+            grid-template-columns: repeat(6, auto);
+            // grid-template: none;
+            // grid-auto-rows: 1fr;
+            grid-row-gap: .5rem;
+            // width: 35rem;
+            // border-radius: 4rem;
+            // position: fixed;
+            // top: 15rem;
+            // left: -25rem;
             // margin-top: -6.5rem;
             z-index: 6;
             box-shadow: 2px 2px 5px darken(@a-primary1, 20%);
-            opacity: .5;
-            transition: opacity 4s ease;
+            // opacity: .5;
+            // transition: opacity 4s ease;
             overflow: hidden;
             
         }
@@ -112,15 +115,15 @@ header {
                 padding-right: 3rem;
             }
 
-            @media @desktop {
-                display: grid;
-            }
+            // @media @desktop {
+            //     display: grid;
+            // }
 
         }
 
         // the actual tab itself
         .tab {
-            background-color: @a-primary4;
+            background-color: @a-primary3;
             padding: 1rem .5rem;
             // border: 1px solid @a-secondary2;
             border-radius: 1rem;
@@ -143,9 +146,11 @@ header {
             }
 
             @media @desktop {
-                text-align: right;
-                border-radius: 4rem;
-                display: none;
+                // text-align: right;
+                // border-radius: 4rem;
+                // display: none;
+                padding: 1rem;
+                
             }
 
             p {
@@ -157,8 +162,7 @@ header {
                 }
 
                 @media @desktop {
-                    font-size: 3rem;
-                    padding-right: 3rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -192,6 +196,28 @@ header {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+
+        .top-section {
+            display: none;
+            h2 {
+                font-family: @josefin;
+                margin-top: 2rem;
+                color: darken(@b-primary1, 50%);
+                text-align: center;
+            }
+
+            p {
+                margin: 1rem;
+                max-width: 100rem;
+                color: darken(@b-primary1, 45%);
+            }   
+        }
+
+        .active-intro {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        
     }
 
     // the news articles
@@ -201,6 +227,9 @@ header {
         width: 100%;
         margin-top: 2rem;
         flex-wrap: wrap;
+        border-top: 1px solid @b-primary2;
+        border-bottom: 1px solid @b-primary2;
+        padding-top: 3rem;
 
         @media @desktop {
         align-items: baseline;
@@ -213,7 +242,7 @@ header {
           background-image:linear-gradient(white, @b-primary3, @b-primary3);
           width: 100%;
           margin-bottom: 3rem;
-          border-radius: 2rem;
+          border-radius: 1rem;
           box-shadow: 8px 8px 10px @b-primary4;
           
             @media (min-width: 1000px) {
@@ -226,7 +255,7 @@ header {
 
             .article-content {
                 background-color: white;
-                border-radius: 0 0 2rem 2rem;
+                border-radius: 0 0 1rem 1rem;
                 .flex(space-around, center, column);
             }
 
@@ -249,7 +278,7 @@ header {
                 object-fit: cover;
                 background-image: linear-gradient(black, white);
                 mix-blend-mode: multiply;
-                border-radius: 2rem 2rem 0 0;
+                border-radius: 1rem 1rem 0 0;
                 // opacity: .2;
             }
 
@@ -311,7 +340,7 @@ header {
             font-size: 2rem;
             border: 0;
             width: 70%;
-            box-shadow: -1rem -2rem 4rem 4rem white;
+            box-shadow: 0rem -2rem 4rem 4rem white;
             cursor: pointer;
 
             &:hover {
@@ -337,11 +366,13 @@ header {
     // Modal content box
     .modal-content {
         background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 10rem auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 100rem;
         border-radius: 1rem;
+        max-height: 80%;
     }
 
     // Close button

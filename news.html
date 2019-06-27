@@ -3,6 +3,7 @@
     <head>
         <title>News from the Garden</title>
         <link rel="stylesheet" href="./css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto&display=swap" rel="stylesheet">
 
         <!-- <script type="text/javascript" src="./js/news.js"></script> -->
 
@@ -15,7 +16,7 @@
     <body>
         <nav class="navbar">
             <div class="logo-container">
-                <a href="#"><img src="images/site-images/logo-yellow.png"></a>
+                <a href="#"><img src="images/site-images/logo-wh-y-gr-shadow.png"></a>
                 <a href="#"><h2>WMP</h2></a>
             </div>
             <ul class="nav-links">
@@ -51,8 +52,32 @@
                 </section>
 
                 <section class="newsfeed">
-                    <h2 class="section-title">All News</h2>
+                    <div class="top-section active-intro"  data-tab="all">
+                        <h2 class="intro">All News</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
+                    </div>
+                    <div class="top-section"  data-tab="gardening-tips">
+                        <h2 class="intro">Discover your garden</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
+                    </div>
+                    <div class="top-section" data-tab="news">
+                        <h2 class="intro">Hot off the presses</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
+                    </div>
+                    <div class="top-section" data-tab="dear-rosie">
+                        <h2 class="intro">Ask Rosie for advice</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
+                    </div>
+                    <div class="top-section"data-tab="opinion">
+                        <h2 class="intro">Editorials</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
+                    </div>
+                    <div class="top-section" data-tab="world">
+                        <h2 class="intro">The wide world of gardening</h2>
+                        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis saepe enim ipsum nesciunt totam cum. Autem doloribus atque officiis aut harum illo! Dolorem quod tenetur id vero maiores sapiente!</p>
 
+
+                    </div>
                     <!---------- NEWS CARDS ----------->
                     <div class="cards-container">
                         <div class="card" data-tab="gardening-tips">
@@ -280,6 +305,12 @@
             </div>
             
         </main>
+
+        <div class="footer">
+            <a href="#" class="footerlink">Back to Top</a>
+            <a href="#" class="footerlink">Privacy Policy</a>
+        </div>
+
         <script type="text/javascript" src="./js/news.js"></script>
     </body>
 
