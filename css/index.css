@@ -555,6 +555,7 @@ header .date-weather {
   margin-top: 1.8rem;
   margin-bottom: 5.6rem;
   line-height: 2.5rem;
+  width: 80%;
 }
 .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
   border-radius: 4px;
@@ -566,6 +567,9 @@ header .date-weather {
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
   margin-top: 4.5rem;
+  vertical-align: middle;
+  line-height: 5.6rem;
+  text-align: center;
 }
 .pagewide .wmpheader .wmpintrobox .yellowman {
   display: none;
@@ -574,18 +578,78 @@ header .date-weather {
   .pagewide .wmpheader .wmpintrobox {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
   .pagewide .wmpheader .wmpintrobox .wmpmedia {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 53%;
+    margin-top: 8rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
+    font-size: 6rem;
+    margin-top: 3.5rem;
+    line-height: 7.4rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
+    width: 22.4rem;
+    height: 5.6rem;
+    font-size: 2.5rem;
+    margin-top: 0rem;
+    font-size: 3.6rem;
+    line-height: 5.6rem;
   }
   .pagewide .wmpheader .wmpintrobox .yellowman {
     display: block;
+    margin-top: 10rem;
+    width: 56%;
+    height: 55.07rem;
   }
   .pagewide .wmpheader .wmpintrobox .greenman {
     display: none;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .wmpheader {
+    height: 88rem;
+  }
+  .pagewide .wmpheader .wmpintrobox {
+    height: 100%;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmp {
+    font-size: 10rem;
+    margin-top: 0;
+    line-height: 12rem;
+    margin-left: 1%;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .wmpslogan {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 4.5rem;
+    margin: 0;
+    margin-top: 0px;
+    margin-top: 17px;
+    width: 80%;
+  }
+  .pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted {
+    margin-top: 11%;
+    height: 8rem;
+    width: 34.4rem;
+    text-align: center;
+    line-height: 8rem;
+  }
+  .pagewide .wmpheader .wmpintrobox .yellowman {
+    height: 73.07rem;
+    margin-top: 8rem;
+    width: 47%;
   }
 }
 .pagewide .buildgrow {
@@ -595,7 +659,7 @@ header .date-weather {
 }
 .pagewide .buildgrow .buildgrowtitle {
   text-align: center;
-  font-size: 2.9rem;
+  font-size: 2.4rem;
   font-family: 'Roboto', sans-serif;
   width: 100%;
   margin-top: 7.9rem;
@@ -633,6 +697,78 @@ header .date-weather {
   line-height: 2.5rem;
   width: 18rem;
 }
+@media (min-width: 500px) {
+  .pagewide .buildgrow .buildgrowtitle {
+    width: 76%;
+    font-size: 2.7rem;
+    line-height: 3.9rem;
+    margin-top: 3.9rem;
+  }
+  .pagewide .buildgrow .buildgrow4 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3rem;
+    margin-bottom: 5.4rem;
+    height: 263px;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0rem;
+    height: 24rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
+    margin-left: 0rem;
+    max-height: 13rem;
+    width: 16rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext {
+    width: 100%;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
+    font-size: 1.1rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
+    font-size: 1rem;
+    margin-top: 1.6rem;
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .buildgrow {
+    height: 770px;
+  }
+  .pagewide .buildgrow .buildgrowtitle {
+    margin-top: 10.9rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    width: 70%;
+  }
+  .pagewide .buildgrow .buildgrow4 {
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 6.3rem;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox {
+    width: 23%;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
+    max-height: 20rem;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
+    width: 100%;
+    font-size: 18px;
+    line-height: 2rem;
+    margin-top: 2.6rem;
+  }
+}
 .pagewide .userhighlight {
   background-color: #fac263;
   height: 40.2rem;
@@ -656,10 +792,50 @@ header .date-weather {
   font-size: 1.5rem;
   font-family: 'Josefin Sans', sans-serif;
 }
+@media (min-width: 500px) {
+  .pagewide .userhighlight .imgwtext {
+    flex-direction: row-reverse;
+  }
+  .pagewide .userhighlight .imgwtext .userimg {
+    width: 26%;
+  }
+  .pagewide .userhighlight .imgwtext .usertextbig {
+    width: 34%;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-top: 12px;
+  }
+  .pagewide .userhighlight .usertextname {
+    margin-top: -1.8rem;
+    margin-left: -29.2rem;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .userhighlight {
+    height: 69rem;
+  }
+  .pagewide .userhighlight .imgwtext .userimg {
+    margin-top: 32px;
+    margin-right: 6%;
+    height: 54.2rem;
+  }
+  .pagewide .userhighlight .imgwtext .usertextbig {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-top: 4.2rem;
+    margin-left: 4rem;
+  }
+  .pagewide .userhighlight .usertextname {
+    margin-top: -1.1rem;
+    margin-left: -58.2rem;
+    font-size: 2.3rem;
+  }
+}
 .pagewide .resources {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 8rem;
 }
 .pagewide .resources .resourcetitle {
   font-size: 2.5rem;
@@ -681,6 +857,47 @@ header .date-weather {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   width: 74%;
+}
+@media (min-width: 500px) {
+  .pagewide .resources {
+    flex-direction: row;
+    height: 38.4rem;
+  }
+  .pagewide .resources .resourcetitle {
+    display: none;
+  }
+  .pagewide .resources .resource1 {
+    width: 28.37rem;
+    align-items: center;
+  }
+  .pagewide .resources .resource1 .resourceimg {
+    width: 19.5rem;
+    height: 13rem;
+    margin-bottom: 2.5rem;
+    margin-top: 9.7rem;
+  }
+  .pagewide .resources .resource1 .resourcep {
+    width: 100%;
+    padding-top: 2.8rem;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .resources {
+    height: 61.5rem;
+    justify-content: space-evenly;
+  }
+  .pagewide .resources .resource1 {
+    align-items: center;
+  }
+  .pagewide .resources .resource1 .resourceimg {
+    height: 200px;
+    width: 100%;
+    margin-top: 5.7rem;
+  }
+  .pagewide .resources .resource1 .resourcep {
+    width: 383px;
+    font-size: 3.5rem;
+  }
 }
 .footer {
   display: flex;
