@@ -1,0 +1,392 @@
+@import 'variables.less';
+
+
+// Header contains the title and potentially the weather/clock widget
+
+header {
+    width: 100%;
+    height: 20rem;
+    // border: 1px black dotted;
+    background-color: @a-primary3;
+    background-image: url("../images/site-images/tree-tile-small3.gif");
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-position-y: 2rem;
+    background-size: 30rem; 
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    // News from the Garden title
+    h1 {
+        // position: relative;
+        // z-index: 4;
+        color: white;
+        // width: auto;
+        // top: 61%;
+        // left: 18%;
+        // right: 15%;
+        font-size: 3rem;
+        font-family: @josefin;
+        // display: none;
+        padding-bottom: 2rem;
+    }
+
+    // the date and weather widget
+    .date-weather {
+        position: relative;
+        z-index: 3;
+        color: white;
+        top: 9rem;
+        left: 70%;
+        font-size: 2rem;
+        display: none;
+    }
+}
+ 
+
+// Main news container has everything else save for the footer
+
+.main-news-container {
+
+    // the tabs banner to select a news topic
+    width: 100%;
+    height: 100%;
+    background-color: @b-primary6;
+    padding-bottom: 4rem;
+
+    .topics {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 
+            repeat(6, 20rem)
+            1rem;
+        grid-template-rows: minmax(2rem, 1fr);
+        padding: 1rem;
+        background-color: @a-primary1;
+        overflow-x: scroll;
+        box-shadow: -5px 0 5px darken(@a-primary1, 20%);
+
+        .topics::after {
+            content: ‘’;
+        }
+
+        @media @tablet {
+            font-size: 1rem;
+            // padding: 1rem 0;
+            // grid-gap: 3px;
+            
+        }
+
+        @media @desktop {
+            grid-template-columns: repeat(6, auto);
+            // grid-template: none;
+            // grid-auto-rows: 1fr;
+            grid-row-gap: .5rem;
+            // width: 35rem;
+            // border-radius: 4rem;
+            // position: fixed;
+            // top: 15rem;
+            // left: -25rem;
+            // margin-top: -6.5rem;
+            z-index: 6;
+            box-shadow: 2px 2px 5px darken(@a-primary1, 20%);
+            // opacity: .5;
+            // transition: opacity 4s ease;
+            overflow: hidden;
+            
+        }
+
+        // the "filter" button that appears between tablet and desktop view
+        .menu-button {
+            position: relative;
+            z-index: 7;
+            text-align: right;
+            color: white;
+            background-color: @a-primary4;
+            border-radius: 4rem;
+            box-shadow: 2px 2px 5px darken(@a-primary1, 10%);
+            display: none;
+
+            p {
+                font-size: 3rem;
+                padding: 2rem;
+                padding-right: 3rem;
+            }
+
+            // @media @desktop {
+            //     display: grid;
+            // }
+
+        }
+
+        // the actual tab itself
+        .tab {
+            background-color: @a-primary3;
+            padding: 1rem .5rem;
+            // border: 1px solid @a-secondary2;
+            border-radius: 1rem;
+            color: white;
+            box-shadow: 2px 2px 5px darken(@a-primary1, 10%);
+            text-align: center;
+            cursor: pointer;
+
+            &:active {
+                background-color: @b-primary1;
+                transform: translateY(10px);
+                box-shadow: 0 0 10px @a-secondary4;
+                // border: 1px solid darken(@b-primary1, 20%);
+                font-weight: 500;
+            }
+            
+            @media @tablet {
+                // padding: 1.5rem 1rem;
+                max-width: 100%;
+            }
+
+            @media @desktop {
+                // text-align: right;
+                // border-radius: 4rem;
+                // display: none;
+                padding: 1rem;
+                
+            }
+
+            p {
+                font-size: 2rem;
+                font-family: @josefin;
+
+                &:active {
+                    font-weight: 500;
+                }
+
+                @media @desktop {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        // the class that controls how the currently-selected tab appears
+        .active-tab {
+
+            p {
+                color: black;
+            }
+
+            background-color: @a-secondary2;
+            color: black;
+            // border: 2px solid black;
+        }
+    }
+
+    .news-container {
+        margin: 0 2rem;
+        // border: 1px dotted seagreen;
+    }
+    //the carousel of relevant articles
+    .carousel-container {
+        height: 10rem;
+        border: 1px solid teal;
+        margin: 2rem 0;
+        display: none;
+    }
+
+    .newsfeed {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .top-section {
+            display: none;
+            h2 {
+                font-family: @josefin;
+                margin-top: 2rem;
+                color: darken(@b-primary1, 50%);
+                text-align: center;
+            }
+
+            p {
+                margin: 1rem;
+                max-width: 100rem;
+                color: darken(@b-primary1, 45%);
+            }   
+        }
+
+        .active-intro {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        
+    }
+
+    // the news articles
+
+    .cards-container {
+        .flex(center, center, row);
+        width: 100%;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        border-top: 1px solid @b-primary2;
+        border-bottom: 1px solid @b-primary2;
+        padding-top: 3rem;
+
+        @media @desktop {
+        align-items: baseline;
+        justify-content: space-around;
+        }
+        
+
+        .card {
+          .flex(space-between, none, column);
+          background-image:linear-gradient(white, @b-primary3, @b-primary3);
+          width: 100%;
+          margin-bottom: 3rem;
+          border-radius: 1rem;
+          box-shadow: 8px 8px 10px @b-primary4;
+          
+            @media (min-width: 1000px) {
+                width: 30%;
+                margin: 1rem;
+                max-width: 75rem;
+                // max-height: 50rem;
+                // overflow-y: hidden;
+            }
+
+            .article-content {
+                background-color: white;
+                border-radius: 0 0 1rem 1rem;
+                .flex(space-around, center, column);
+            }
+
+            .headline {
+                position: relative;
+                z-index: 5;
+                // font-size: 8rem;
+                // font-family: Didot, serif;
+                // margin: -20rem 2rem 0 2rem;
+                color: black;
+                // border: 2px red solid;
+                padding: 1rem 2rem;
+                font-weight: 500;
+                padding-bottom: 1rem;
+            }
+
+            .headline-img {
+                width: 100%;
+                height: 20rem;
+                object-fit: cover;
+                background-image: linear-gradient(black, white);
+                mix-blend-mode: multiply;
+                border-radius: 1rem 1rem 0 0;
+                // opacity: .2;
+            }
+
+            h3 {
+
+                font-size: 2.75rem;
+                @media (min-width: 1000px) {
+                    font-size: 2rem;
+                }
+            }
+
+          .author {
+            .flex(flex-start, center, row);
+            margin: 0 0 1.5rem 2.5rem;
+
+                .img-container {
+                    padding-right: 10px;
+                    border-right: 1px solid lightgrey;
+                    height: 40px;
+                    
+                    img {
+                        width: 40px;
+                    }
+                }
+
+                span {
+                padding-left: 1.5rem;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: grey;
+
+                @media (min-width: 1000px) {
+                    font-size: 1.3rem;
+                }
+                }
+            }
+
+            .article {
+                margin: 2rem;
+                color: rgb(56, 56, 56);
+                font-size: 2rem;
+
+                @media @desktop {
+                    max-height: 8rem;
+                    overflow: hidden;
+                }
+
+                @media (min-width: 1000px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        #myBtn {
+            color: @a-primary4;
+            margin-bottom: 3rem;
+            background-color: white;
+            font-size: 2rem;
+            border: 0;
+            width: 70%;
+            box-shadow: 0rem -2rem 4rem 4rem white;
+            cursor: pointer;
+
+            &:hover {
+                color: @a-secondary2;
+            }
+        }
+    }
+
+    // Modal articles
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 11; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    // Modal content box
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10rem auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 100rem;
+        border-radius: 1rem;
+        max-height: 80%;
+    }
+
+    // Close button
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+}
