@@ -185,6 +185,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
         .buildgrowtitle{
             text-align: center;
@@ -199,6 +200,8 @@
         
         .buildgrow4{
             margin-top: 4.4rem;
+            width:100%;
+            
 
             // #lastbgbox{
             //     margin-bottom: 1.3rem;
@@ -207,12 +210,15 @@
             .bgsmallbox{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                width:100%;
+               
                 height: 16rem;
                 margin-bottom: 10.3rem;
+                
 
                 .bg1img{
                     margin-left: 0.9rem;
+                    width: 47%;
                 }
 
                 .bgtext{
@@ -249,8 +255,10 @@
         }
         
         @media @tablet{
+
+
             .buildgrowtitle{
-                width: 76%;
+                width: 100%;
                 font-size: 2.7rem;
                 line-height: 3.9rem;
                 margin-top: 3.9rem;
@@ -258,6 +266,7 @@
             }
 
             .buildgrow4{
+                justify-content: space-evenly;
                 display: flex;
                 flex-direction: row;
                 margin-top: 0.3rem;
@@ -268,28 +277,34 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                   
                     margin-bottom: 0rem;
                     height: 24rem;
+                    justify-content: space-evenly;
+                    width:24%;
+
 
                     .bg1img{
                         margin-left: 0rem;
                         max-height:13rem;
-                        width:16rem;
+                        // object-fit: contain;
                     }
 
                     .bgtext{
                         width: 100%;
     
                         .bgsmalltitle{
-                            font-size: 1.1rem;
+                            // font-size: 1.1rem;
+                            font-size: 2vmin;
+                            width: 100%;
                         }
     
                         .bgsmallp{
                             
-                            font-size: 1.0rem;
+                            // font-size: 1.0rem;
                             margin-top: 1.6rem;
                             line-height: 1.5rem;
+                            font-size: 2vmin;
+                            width: 100%;
                            
     
                         }
@@ -316,6 +331,7 @@
 
                 width: 100%;
                 justify-content: space-evenly;
+                align-items: flex-end;
                 margin-top: 6.3rem;
             
 
@@ -540,45 +556,6 @@
         }
     }
    
-    /*
-
-    /* The dots/bullets/indicators 
-    .dot{
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-  
-    .active, .dot:hover {
-        background-color: #717171;
-    }
-    */
-
-    /* Fading animation */ /*
-    .fade{
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-  
-    @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-  
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-    */
-
-
 
 
 
@@ -618,6 +595,8 @@
         @media @tablet{
             flex-direction:row;
             height: 38.4rem;
+            justify-content: space-evenly;
+            align-items: flex-start;
 
 
             .resourcetitle{
@@ -626,9 +605,10 @@
 
 
             .resource1{
-                width: 28.37rem;
+                // width: 28.37rem;
                 // height: 318.7px;
                 align-items: center;
+                width: 30%;
 
 
                 .resourceimg{
@@ -642,6 +622,7 @@
                 .resourcep{
                     width: 100%;
                     padding-top: 2.8rem;
+                    font-size: 4vmin;
                 }
             }
 
@@ -651,9 +632,12 @@
         @media @desktop{
             height: 61.5rem;
             justify-content: space-evenly;
+            align-items: flex-start;
+
 
             .resource1{
                 align-items: center;
+                width: 30%;
 
                 .resourceimg{
                     height: 200px;
@@ -662,8 +646,9 @@
                 }
 
                 .resourcep{
-                    width: 383px;
-                    font-size: 3.5rem;
+                    width: 100%;
+                    // font-size: 3.5rem;
+                    font-size: 3vmin;
                 }
             }
         }
