@@ -522,6 +522,8 @@ header .date-weather {
   width: 100%;
   height: 100%;
   padding-top: 7rem;
+  /* The dots/bullets/indicators */
+  /* Fading animation */
 }
 .pagewide .wmpheader {
   background-color: #faceaf;
@@ -769,66 +771,128 @@ header .date-weather {
     margin-top: 2.6rem;
   }
 }
-.pagewide .userhighlight {
+.pagewide .slideshowContainer {
   background-color: #fac263;
   height: 40.2rem;
+}
+.pagewide .slideshowContainer .prev,
+.pagewide .slideshowContainer .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45.5%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.pagewide .slideshowContainer .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.pagewide .slideshowContainer .prev:hover,
+.pagewide .slideshowContainer .next:hover {
+  background-color: #f8a519;
+}
+.pagewide .slideshowContainer .userhighlight {
   display: flex;
   flex-direction: column;
+  display: none;
 }
-.pagewide .userhighlight .imgwtext {
+.pagewide .slideshowContainer .userhighlight .imgwtext {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 2rem;
 }
-.pagewide .userhighlight .imgwtext .usertextbig {
+.pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
   width: 40%;
   font-size: 2.2rem;
   font-family: 'Josefin Sans', sans-serif;
 }
-.pagewide .userhighlight .usertextname {
+.pagewide .slideshowContainer .userhighlight .usertextname {
   text-align: center;
   margin-top: 3.5rem;
   font-size: 1.5rem;
   font-family: 'Josefin Sans', sans-serif;
 }
 @media (min-width: 500px) {
-  .pagewide .userhighlight .imgwtext {
+  .pagewide .slideshowContainer .userhighlight .imgwtext {
     flex-direction: row-reverse;
   }
-  .pagewide .userhighlight .imgwtext .userimg {
+  .pagewide .slideshowContainer .userhighlight .imgwtext .userimg {
     width: 26%;
   }
-  .pagewide .userhighlight .imgwtext .usertextbig {
+  .pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
     width: 34%;
     font-size: 2.6rem;
     line-height: 3rem;
     margin-top: 12px;
   }
-  .pagewide .userhighlight .usertextname {
+  .pagewide .slideshowContainer .userhighlight .usertextname {
     margin-top: -1.8rem;
     margin-left: -29.2rem;
   }
 }
 @media (min-width: 800px) {
-  .pagewide .userhighlight {
+  .pagewide .slideshowContainer .userhighlight {
     height: 69rem;
   }
-  .pagewide .userhighlight .imgwtext .userimg {
+  .pagewide .slideshowContainer .userhighlight .imgwtext .userimg {
     margin-top: 32px;
     margin-right: 6%;
     height: 54.2rem;
   }
-  .pagewide .userhighlight .imgwtext .usertextbig {
+  .pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
     font-size: 4.5rem;
     line-height: 5rem;
     margin-top: 4.2rem;
     margin-left: 4rem;
   }
-  .pagewide .userhighlight .usertextname {
+  .pagewide .slideshowContainer .userhighlight .usertextname {
     margin-top: -1.1rem;
     margin-left: -58.2rem;
     font-size: 2.3rem;
+  }
+}
+.pagewide .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.pagewide .active,
+.pagewide .dot:hover {
+  background-color: #717171;
+}
+.pagewide .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 .pagewide .resources {

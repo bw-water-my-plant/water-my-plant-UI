@@ -349,91 +349,158 @@
         
     }
 
-
-    .userhighlight{
+    .slideshowContainer{
         background-color: @a-secondary4;
         height: 40.2rem;
-        display: flex;
-        flex-direction: column;
+        
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 45.5%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
 
-        .imgwtext{
+        .next{
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: @a-secondary1;
+        }
+
+    
+        .userhighlight{
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding-top: 2rem;
+            flex-direction: column;
+            display: none;
 
-            .usertextbig{
-                width:40%;
-                font-size: 2.2rem;
+
+            .imgwtext{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-top: 2rem;
+
+                .usertextbig{
+                    width:40%;
+                    font-size: 2.2rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+            }
+
+            .usertextname{
+                text-align: center;
+                margin-top: 3.5rem;
+                font-size: 1.5rem;
                 font-family: 'Josefin Sans', sans-serif;
             }
 
-        }
 
-        .usertextname{
-            text-align: center;
-            margin-top: 3.5rem;
-            font-size: 1.5rem;
-            font-family: 'Josefin Sans', sans-serif;
-        }
+            @media @tablet{
 
+                .imgwtext{
+                    flex-direction: row-reverse;
 
-        @media @tablet{
+                    .userimg{
+                        width:26%;
+                    }
 
-            .imgwtext{
-                flex-direction: row-reverse;
+                    .usertextbig{
+                        width:34%;
+                        font-size: 2.6rem;
+                        line-height: 3rem;
+                        margin-top: 12px;
 
-                .userimg{
-                    width:26%;
+                    }
                 }
 
-                .usertextbig{
-                    width:34%;
-                    font-size: 2.6rem;
-                    line-height: 3rem;
-                    margin-top: 12px;
-
+                .usertextname{
+                    margin-top: -1.8rem;
+                    margin-left: -29.2rem;
                 }
+                
             }
 
-            .usertextname{
-                margin-top: -1.8rem;
-                margin-left: -29.2rem;
-            }
-            
-        }
 
+            @media @desktop{
+                height: 69rem;
 
-        @media @desktop{
-            height: 69rem;
-
-            .imgwtext{
-                .userimg{
-                    margin-top: 32px;
-                    margin-right: 6%;
-                    height: 54.2rem;
+                .imgwtext{
+                    .userimg{
+                        margin-top: 32px;
+                        margin-right: 6%;
+                        height: 54.2rem;
+                    }
+                    .usertextbig{
+                        font-size: 4.5rem;
+                        line-height: 5.0rem;
+                        margin-top: 4.2rem;
+                        margin-left: 4rem;
+                    }
                 }
-                .usertextbig{
-                    font-size: 4.5rem;
-                    line-height: 5.0rem;
-                    margin-top: 4.2rem;
-                    margin-left: 4rem;
-                }
-            }
 
-            .usertextname{
-                margin-top: -1.1rem;
-                margin-left: -58.2rem;
-                font-size: 2.3rem;
+                .usertextname{
+                    margin-top: -1.1rem;
+                    margin-left: -58.2rem;
+                    font-size: 2.3rem;
+                }
+
             }
 
         }
 
     }
 
-
- 
+    /* The dots/bullets/indicators */
+    .dot{
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+  
+    .active, .dot:hover {
+        background-color: #717171;
+    }
     
+
+    /* Fading animation */
+    .fade{
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+  
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+  
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+
+
+
+
+
     .resources{
         display:flex;
         flex-direction:column;
@@ -524,9 +591,7 @@
 
     }
 
-  
-
-
+    
 }
 
 
