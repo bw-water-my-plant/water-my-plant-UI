@@ -1,0 +1,305 @@
+body {
+    @media @phoneAboutUS {
+        max-width: 100%;
+    }
+}
+
+.aboutUsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 500px) {
+        max-width: 100%;
+
+        img {
+            width: 350px;
+        }
+    }
+
+
+
+    img {
+        padding-top: 8%;
+        max-width: 100%;
+        background-color: @b-primary5;
+
+            @media (max-width: 500px){
+                width: 100%;
+                padding-top: 20%;
+            }
+        
+    }
+    
+    p {
+        padding: 10% 0 10% 0;
+        font-size: 3rem;
+        text-align: center;
+
+       @media (max-width: 500px) {
+           font-size: 1.4rem;
+       }
+    }
+
+    
+}
+
+.meetOurTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid @b-primary5;
+    background-color: @b-primary5;
+
+    .teamShowcase {
+        display: flex;
+        flex-direction: column;
+
+        
+        .topHalfTeam {
+            
+            display: flex;
+            padding-bottom: 5%;
+            justify-content: space-evenly;
+
+            @media @phoneAboutUS {
+                flex-direction: column;
+             padding: 0 5% 0 5%
+            }
+
+            .teamMember {
+                display: flex;
+                border: solid @a-primary1;
+                background-color: @a-primary1;
+                border-radius: 10%;
+                max-width: 30%;
+                
+
+                @media @phoneAboutUS {
+                    min-width: 100%;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    background-color: @b-primary5;
+                    border: @b-primary5;
+                
+                }
+                
+    
+                    img {
+                        border-radius: 100%;
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                    }
+    
+                .info {
+                    text-align: center;
+                    max-width: 33%;
+                    
+    
+                    p {
+                        padding: 3%;
+                        color: white;
+                        font-size: 1rem;   
+                        
+                        @media @phoneAboutUS {
+                        color: @a-primary1;
+                        
+                }
+                }
+                        @media @phoneAboutUS {
+                            padding-bottom: 5%;
+                            padding-top: 5%;
+                        }
+                
+            }
+                
+            }
+        }
+
+        .bottomHalfTeam {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+
+            @media @phoneAboutUS {
+                flex-direction: column;
+                padding: 0 5% 0 5%
+            }
+            
+
+            .teamMember {
+                display: flex;
+                border: solid @a-primary1;
+                background-color: @a-primary1;
+                border-radius: 10%;
+                max-width: 30%;
+                
+                @media @phoneAboutUS {
+                    min-width: 100%;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    background-color: @b-primary5;
+                    border: @b-primary5;
+
+                }
+    
+                    img {
+                        border-radius: 100%;
+                        padding-bottom: 5%;
+                    }
+    
+                .info {
+                    text-align: center;
+                    max-width: 33%;
+    
+                    p {
+                        padding: 3%;
+                        color: white;
+                        font-size: 1rem;
+
+                        @media @phoneAboutUS {
+                            color: @a-primary1;
+                    }
+                    }
+
+                    @media @phoneAboutUS {
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                    }
+            
+                }
+            }
+        }
+
+        
+        
+    }
+
+    h2 {
+        color: @a-primary1;
+        padding: 4% 0 8% 0;
+    }
+}
+
+.ourCoreValues {
+    
+    display: flex;
+    padding: 10% 0 10% 0;
+
+    .buildLearnGrow{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media @phoneAboutUS {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @media @tabletAboutUs {
+            width: 200%;
+            justify-content: center;
+            align-items: center;
+        }
+
+    
+
+        .coreValue {
+            display: flex;
+
+            @media @phoneAboutUS {
+                width: 100%;
+                flex-direction: row;
+
+                img {
+                    padding: 0 0 0 0%;
+                    
+                }
+
+                
+            }
+
+            img {
+                padding-right: 8%;
+            }
+
+            
+
+            .valueInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                text-align: center;
+
+                h4 {
+                    padding-bottom: 5%;
+                }
+
+                @media @phoneAboutUS {
+                    width: 100%;
+                    padding: 8% 0 0 0;
+
+                    p {
+                        font-size: 1rem;
+                        padding: 0% 5% 0 0;
+                        text-align: center;
+                    }
+
+                }
+            }
+        }
+
+        h2 {
+            padding-bottom: 10%;
+            color: @a-primary1;
+        }
+
+
+        .learnValue {
+
+            @media @phoneAboutUS {
+                padding: 5% 0 0 0;
+            }
+        }
+    }
+
+
+    .coreValuesImg {
+        width: 50%;
+
+        @media @phoneAboutUS {
+            width: 0%;
+        }
+
+        @media @tabletAboutUs {
+            width: 0%;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+
+            @media @phoneAboutUS {
+                display: none;
+
+                max-width: 0%;
+                max-height: 0%;
+            }
+
+            @media @tabletAboutUs {
+                display: none;
+
+                max-width: 0%;
+                max-height: 0%;
+            }
+        }
+    }
+
+
+    
+}
+
