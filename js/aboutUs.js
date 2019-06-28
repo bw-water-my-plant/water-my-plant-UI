@@ -45,19 +45,19 @@ class TeamMember {
         this.bio = attributes.bio;
     }
 
-    giveBio() { //Method
-       alert(`${this.bio}`);
+    sendURL() { //Method
+        window.location.href = `${this.bio}`;
     }
     }
 
 
-const Kerry = new TeamMember({name:"Kerry", position:"UX Developer", bio:"Kerry is from Atlanta Georgia & reps it hard. He’s a music aficionado that believes design can be accessible & elegant as nature."});
-const Bhumi = new TeamMember({name:"Bhumi", position:"Team Lead", bio:"Lambda School Student FSW16"});
-const Hannah = new TeamMember({name:"Hannah", position:"UI Developer", bio:"Hannah is a Biology & Chinese double major at GaTech. In her free time, she bakes for friends, grows herbs/veggies, & read fantasy novels."})
-const Faye = new TeamMember({name:"Faye", position:"UI Developer", bio:"Illustrator, web developer, technical trainer. Terrible at keeping plants alive."})
-const York = new TeamMember({name:"York", position:"Backend Developer", bio:"York is a front-end architect that works in New York!"})
-const Tracy = new TeamMember({name:"Tracy", position:"Backend Developer", bio:"Tracy likes cherries!"})
-const Ben = new TeamMember({name:"Ben", position:"UI Developer", bio:"A native texan that loves coffee!"})
+const Kerry = new TeamMember({name:"Kerry", position:"UX Developer", bio:"https://www.linkedin.com/in/kerry-mcphearson-9b361193/"});
+const Bhumi = new TeamMember({name:"Bhumi", position:"Team Lead", bio:"https://github.com/bhumip214"});
+const Hannah = new TeamMember({name:"Hannah", position:"UI Developer", bio:"https://github.com/HannahMarieWieser"})
+const Faye = new TeamMember({name:"Faye", position:"UI Developer", bio:"https://www.linkedin.com/in/faye-skeen-1061273a/"})
+const York = new TeamMember({name:"York", position:"Backend Developer", bio:"https://google.com/"})
+const Tracy = new TeamMember({name:"Tracy", position:"Backend Developer", bio:"https://google.com/"})
+const Ben = new TeamMember({name:"Ben", position:"UI Developer", bio:"https://www.linkedin.com/in/benjamin-allen-a4279a166/"})
 
 
 //Team Member Bio Alerts
@@ -71,28 +71,28 @@ const bhumiImg = document.querySelector(".teamMember6 img")
 const benImg = document.querySelector(".teamMember7 img")
 
 kerryImg.addEventListener("dblclick", function(){
-    Kerry.giveBio();
+    Kerry.sendURL();
 })
 
 fayeImg.addEventListener("dblclick", function(){
-    Faye.giveBio();
+    Faye.sendURL();
 })
 
 yorkImg.addEventListener("dblclick", function(){
-    York.giveBio();
+    York.sendURL();
 })
 
 hannahImg.addEventListener("dblclick", function(){
-    Hannah.giveBio();
+    Hannah.sendURL();
 })
 
 tracyImg.addEventListener("dblclick", function(){
-    Tracy.giveBio();
+    Tracy.sendURL();
 })
 
 bhumiImg.addEventListener("dblclick", function(){
-    Bhumi.giveBio();
+    Bhumi.sendURL();
 })
 benImg.addEventListener("dblclick", function(){
-    Ben.giveBio();
+    Ben.sendURL();
 })
