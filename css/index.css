@@ -620,6 +620,13 @@ header .date-weather {
   line-height: 5.6rem;
   text-align: center;
 }
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted:hover {
+  background-color: #8659cc;
+  box-shadow: 0px 10px 15px rgba(120, 70, 198, 0.4);
+}
+.pagewide .wmpheader .wmpintrobox .wmpmedia .getstarted:active {
+  background-color: #6033a6;
+}
 .pagewide .wmpheader .wmpintrobox .yellowman {
   display: none;
 }
@@ -705,6 +712,7 @@ header .date-weather {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .pagewide .buildgrow .buildgrowtitle {
   text-align: center;
@@ -716,16 +724,18 @@ header .date-weather {
 }
 .pagewide .buildgrow .buildgrow4 {
   margin-top: 4.4rem;
+  width: 100%;
 }
 .pagewide .buildgrow .buildgrow4 .bgsmallbox {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
   height: 16rem;
   margin-bottom: 10.3rem;
 }
 .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
   margin-left: 0.9rem;
+  width: 47%;
 }
 .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext {
   display: flex;
@@ -748,12 +758,13 @@ header .date-weather {
 }
 @media (min-width: 500px) {
   .pagewide .buildgrow .buildgrowtitle {
-    width: 76%;
+    width: 100%;
     font-size: 2.7rem;
     line-height: 3.9rem;
     margin-top: 3.9rem;
   }
   .pagewide .buildgrow .buildgrow4 {
+    justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     margin-top: 0.3rem;
@@ -766,22 +777,25 @@ header .date-weather {
     align-items: center;
     margin-bottom: 0rem;
     height: 24rem;
+    justify-content: space-evenly;
+    width: 24%;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bg1img {
     margin-left: 0rem;
     max-height: 13rem;
-    width: 16rem;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext {
     width: 100%;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmalltitle {
-    font-size: 1.1rem;
+    font-size: 2vmin;
+    width: 100%;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox .bgtext .bgsmallp {
-    font-size: 1rem;
     margin-top: 1.6rem;
     line-height: 1.5rem;
+    font-size: 2vmin;
+    width: 100%;
   }
 }
 @media (min-width: 800px) {
@@ -797,6 +811,7 @@ header .date-weather {
   .pagewide .buildgrow .buildgrow4 {
     width: 100%;
     justify-content: space-evenly;
+    align-items: flex-end;
     margin-top: 6.3rem;
   }
   .pagewide .buildgrow .buildgrow4 .bgsmallbox {
@@ -818,66 +833,153 @@ header .date-weather {
     margin-top: 2.6rem;
   }
 }
-.pagewide .userhighlight {
-  background-color: #fac263;
-  height: 40.2rem;
+.pagewide .slideshowContainer {
+  height: 40rem;
+  /* Fading animation */
+}
+.pagewide .slideshowContainer .userhighlight {
   display: flex;
   flex-direction: column;
+  display: none;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.pagewide .userhighlight .imgwtext {
+.pagewide .slideshowContainer .userhighlight .imgwtext {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 2rem;
 }
-.pagewide .userhighlight .imgwtext .usertextbig {
+.pagewide .slideshowContainer .userhighlight .imgwtext .userimg {
+  height: 100%;
+  width: auto;
+}
+.pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
   width: 40%;
-  font-size: 2.2rem;
+  font-size: 4.2vw;
   font-family: 'Josefin Sans', sans-serif;
 }
-.pagewide .userhighlight .usertextname {
+.pagewide .slideshowContainer .userhighlight .usertextname {
   text-align: center;
-  margin-top: 3.5rem;
-  font-size: 1.5rem;
+  margin-top: 5%;
+  font-size: 3.5vw;
   font-family: 'Josefin Sans', sans-serif;
 }
 @media (min-width: 500px) {
-  .pagewide .userhighlight .imgwtext {
+  .pagewide .slideshowContainer {
+    height: 40.2rem;
+  }
+  .pagewide .slideshowContainer .userhighlight .imgwtext {
     flex-direction: row-reverse;
   }
-  .pagewide .userhighlight .imgwtext .userimg {
-    width: 26%;
-  }
-  .pagewide .userhighlight .imgwtext .usertextbig {
+  .pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
     width: 34%;
-    font-size: 2.6rem;
+    font-size: 2.7vmin;
     line-height: 3rem;
     margin-top: 12px;
   }
-  .pagewide .userhighlight .usertextname {
-    margin-top: -1.8rem;
-    margin-left: -29.2rem;
+  .pagewide .slideshowContainer .userhighlight .usertextname {
+    position: absolute;
+    bottom: 4rem;
+    left: 24%;
+    font-size: 2.5vw;
   }
 }
 @media (min-width: 800px) {
-  .pagewide .userhighlight {
+  .pagewide .slideshowContainer {
     height: 69rem;
   }
-  .pagewide .userhighlight .imgwtext .userimg {
+  .pagewide .slideshowContainer .userhighlight .imgwtext {
+    height: 70%;
+  }
+  .pagewide .slideshowContainer .userhighlight .imgwtext .userimg {
     margin-top: 32px;
     margin-right: 6%;
-    height: 54.2rem;
   }
-  .pagewide .userhighlight .imgwtext .usertextbig {
-    font-size: 4.5rem;
-    line-height: 5rem;
+  .pagewide .slideshowContainer .userhighlight .imgwtext .usertextbig {
+    font-size: 2vmin;
+    line-height: 5.2vmin;
     margin-top: 4.2rem;
     margin-left: 4rem;
   }
-  .pagewide .userhighlight .usertextname {
-    margin-top: -1.1rem;
-    margin-left: -58.2rem;
-    font-size: 2.3rem;
+  .pagewide .slideshowContainer .userhighlight .usertextname {
+    position: absolute;
+    bottom: 6rem;
+    left: 29%;
+    font-size: 2vw;
+  }
+}
+.pagewide .slideshowContainer .prev,
+.pagewide .slideshowContainer .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45.5%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+@media (min-width: 500px) {
+  .pagewide .slideshowContainer .prev,
+  .pagewide .slideshowContainer .next {
+    top: 29.5%;
+  }
+}
+@media (min-width: 800px) {
+  .pagewide .slideshowContainer .prev,
+  .pagewide .slideshowContainer .next {
+    top: 41.5%;
+  }
+}
+.pagewide .slideshowContainer .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.pagewide .slideshowContainer .prev:hover,
+.pagewide .slideshowContainer .next:hover {
+  background-color: #6033a6;
+}
+.pagewide .slideshowContainer .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.pagewide .slideshowContainer .active,
+.pagewide .slideshowContainer .dot:hover {
+  background-color: #717171;
+}
+.pagewide .slideshowContainer .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 .pagewide .resources {
@@ -911,13 +1013,15 @@ header .date-weather {
   .pagewide .resources {
     flex-direction: row;
     height: 38.4rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
   }
   .pagewide .resources .resourcetitle {
     display: none;
   }
   .pagewide .resources .resource1 {
-    width: 28.37rem;
     align-items: center;
+    width: 30%;
   }
   .pagewide .resources .resource1 .resourceimg {
     width: 19.5rem;
@@ -928,15 +1032,18 @@ header .date-weather {
   .pagewide .resources .resource1 .resourcep {
     width: 100%;
     padding-top: 2.8rem;
+    font-size: 4vmin;
   }
 }
 @media (min-width: 800px) {
   .pagewide .resources {
     height: 61.5rem;
     justify-content: space-evenly;
+    align-items: flex-start;
   }
   .pagewide .resources .resource1 {
     align-items: center;
+    width: 30%;
   }
   .pagewide .resources .resource1 .resourceimg {
     height: 200px;
@@ -944,8 +1051,8 @@ header .date-weather {
     margin-top: 5.7rem;
   }
   .pagewide .resources .resource1 .resourcep {
-    width: 383px;
-    font-size: 3.5rem;
+    width: 100%;
+    font-size: 3vmin;
   }
 }
 .footer {

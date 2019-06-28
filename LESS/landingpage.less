@@ -63,6 +63,14 @@
 
                 }
 
+                .getstarted:hover{
+                    background-color: @safety5;
+                    box-shadow: 0px 10px 15px rgba(120,70,198, 0.4);
+                }
+
+                .getstarted:active{
+                    background-color: @safety2;
+                }
                 
 
             
@@ -185,6 +193,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
         .buildgrowtitle{
             text-align: center;
@@ -199,6 +208,8 @@
         
         .buildgrow4{
             margin-top: 4.4rem;
+            width:100%;
+            
 
             // #lastbgbox{
             //     margin-bottom: 1.3rem;
@@ -207,12 +218,15 @@
             .bgsmallbox{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                width:100%;
+               
                 height: 16rem;
                 margin-bottom: 10.3rem;
+                
 
                 .bg1img{
                     margin-left: 0.9rem;
+                    width: 47%;
                 }
 
                 .bgtext{
@@ -249,8 +263,10 @@
         }
         
         @media @tablet{
+
+
             .buildgrowtitle{
-                width: 76%;
+                width: 100%;
                 font-size: 2.7rem;
                 line-height: 3.9rem;
                 margin-top: 3.9rem;
@@ -258,6 +274,7 @@
             }
 
             .buildgrow4{
+                justify-content: space-evenly;
                 display: flex;
                 flex-direction: row;
                 margin-top: 0.3rem;
@@ -268,28 +285,34 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                   
                     margin-bottom: 0rem;
                     height: 24rem;
+                    justify-content: space-evenly;
+                    width:24%;
+
 
                     .bg1img{
                         margin-left: 0rem;
                         max-height:13rem;
-                        width:16rem;
+                        // object-fit: contain;
                     }
 
                     .bgtext{
                         width: 100%;
     
                         .bgsmalltitle{
-                            font-size: 1.1rem;
+                            // font-size: 1.1rem;
+                            font-size: 2vmin;
+                            width: 100%;
                         }
     
                         .bgsmallp{
                             
-                            font-size: 1.0rem;
+                            // font-size: 1.0rem;
                             margin-top: 1.6rem;
                             line-height: 1.5rem;
+                            font-size: 2vmin;
+                            width: 100%;
                            
     
                         }
@@ -316,6 +339,7 @@
 
                 width: 100%;
                 justify-content: space-evenly;
+                align-items: flex-end;
                 margin-top: 6.3rem;
             
 
@@ -349,47 +373,69 @@
         
     }
 
-
-    .userhighlight{
-        background-color: @a-secondary4;
-        height: 40.2rem;
-        display: flex;
-        flex-direction: column;
-
-        .imgwtext{
+    .slideshowContainer{
+        // background-color: @a-secondary4;
+        height: 40rem;
+    
+        
+    
+        .userhighlight{
+            // background-color: @a-secondary4;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding-top: 2rem;
+            flex-direction: column;
+            display: none;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 100%;
+            position: relative;
 
-            .usertextbig{
-                width:40%;
-                font-size: 2.2rem;
-                font-family: 'Josefin Sans', sans-serif;
-            }
-
-        }
-
-        .usertextname{
-            text-align: center;
-            margin-top: 3.5rem;
-            font-size: 1.5rem;
-            font-family: 'Josefin Sans', sans-serif;
-        }
-
-
-        @media @tablet{
 
             .imgwtext{
-                flex-direction: row-reverse;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-top: 2rem;
 
                 .userimg{
-                    width:26%;
+                    height: 100%;
+                    width: auto;
                 }
 
                 .usertextbig{
+                    width:40%;
+                    font-size: 4.2vw;
+                    //font-size: 2.2rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+            }
+
+            .usertextname{
+                text-align: center;
+                margin-top: 5%;
+                font-size: 3.5vw;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        }
+
+        @media @tablet{
+            height: 40.2rem;
+            
+        
+            .userhighlight{
+                // background-color: @safety4;
+
+                .imgwtext{
+                flex-direction: row-reverse;
+
+                // .userimg{
+                //     width:26%;
+                // }
+
+                .usertextbig{
                     width:34%;
-                    font-size: 2.6rem;
+                    // font-size: 3.5vw;
+                    font-size: 2.7vmin;
                     line-height: 3rem;
                     margin-top: 12px;
 
@@ -397,43 +443,130 @@
             }
 
             .usertextname{
-                margin-top: -1.8rem;
-                margin-left: -29.2rem;
+                position: absolute;
+                bottom: 4rem;
+                left: 24%;
+                // margin-top: 2%;
+                // margin-left: -6%;
+                font-size: 2.5vw;
             }
-            
+
+            }
+                
+                
         }
 
 
         @media @desktop{
+            
             height: 69rem;
 
-            .imgwtext{
-                .userimg{
-                    margin-top: 32px;
-                    margin-right: 6%;
-                    height: 54.2rem;
-                }
-                .usertextbig{
-                    font-size: 4.5rem;
-                    line-height: 5.0rem;
-                    margin-top: 4.2rem;
-                    margin-left: 4rem;
-                }
-            }
+            .userhighlight{
+                // background-color: @b-secondary4;
 
-            .usertextname{
-                margin-top: -1.1rem;
-                margin-left: -58.2rem;
-                font-size: 2.3rem;
+                .imgwtext{
+                    height: 70%;
+
+                    .userimg{
+                        margin-top: 32px;
+                        margin-right: 6%;
+                        // height: 54.2rem;
+                        
+                    }
+
+                    .usertextbig{
+                        font-size: 2vmin;
+                        line-height: 5.2vmin;
+                        margin-top: 4.2rem;
+                        margin-left: 4rem;
+                    }
+                }
+
+                .usertextname{
+                    position: absolute;
+                    bottom: 6rem;
+                    left: 29%;
+                    font-size: 2vw;
+                    // margin-top: -1.1rem;
+                    // margin-left: -58.2rem;
+                    
+                }
             }
 
         }
 
-    }
+        
 
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 45.5%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
 
- 
+            @media @tablet{
+                top: 29.5%
+            }
+
+            @media @desktop{
+                top: 41.5%;
+            }
+        }
+
+        .next{
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color:@safety2;
+        }
+
+        .dot{
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+      
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        
     
+        /* Fading animation */
+        .fade{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+      
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+      
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    }
+   
+
+
+
     .resources{
         display:flex;
         flex-direction:column;
@@ -470,6 +603,8 @@
         @media @tablet{
             flex-direction:row;
             height: 38.4rem;
+            justify-content: space-evenly;
+            align-items: flex-start;
 
 
             .resourcetitle{
@@ -478,9 +613,10 @@
 
 
             .resource1{
-                width: 28.37rem;
+                // width: 28.37rem;
                 // height: 318.7px;
                 align-items: center;
+                width: 30%;
 
 
                 .resourceimg{
@@ -494,6 +630,7 @@
                 .resourcep{
                     width: 100%;
                     padding-top: 2.8rem;
+                    font-size: 4vmin;
                 }
             }
 
@@ -503,9 +640,12 @@
         @media @desktop{
             height: 61.5rem;
             justify-content: space-evenly;
+            align-items: flex-start;
+
 
             .resource1{
                 align-items: center;
+                width: 30%;
 
                 .resourceimg{
                     height: 200px;
@@ -514,8 +654,9 @@
                 }
 
                 .resourcep{
-                    width: 383px;
-                    font-size: 3.5rem;
+                    width: 100%;
+                    // font-size: 3.5rem;
+                    font-size: 3vmin;
                 }
             }
         }
@@ -524,9 +665,7 @@
 
     }
 
-  
-
-
+    
 }
 
 
