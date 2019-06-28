@@ -879,10 +879,6 @@ header .date-weather {
   text-align: center;
   font-size: 2.4rem;
   font-family: 'Roboto', sans-serif;
-<<<<<<< HEAD
-  margin-left: 2.4rem;
-  margin-right: 2.9rem;
-=======
   width: 100%;
   margin-top: 7.9rem;
   margin-bottom: 5rem;
@@ -1241,5 +1237,4 @@ header .date-weather {
   margin-left: 2.2rem;
   margin-right: 2.2rem;
   padding-top: 4.2rem;
->>>>>>> 81773c25fa4d93ed72a72dad887f58eed3f6ae0a
 }
