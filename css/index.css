@@ -515,216 +515,6 @@ header .date-weather {
   text-decoration: none;
   cursor: pointer;
 }
-@media (max-width: 500px) {
-  body {
-    max-width: 100%;
-  }
-}
-.aboutUsHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (max-width: 500px) {
-  .aboutUsHeader {
-    max-width: 100%;
-  }
-  .aboutUsHeader img {
-    width: 350px;
-  }
-}
-.aboutUsHeader img {
-  padding-top: 8%;
-  max-width: 100%;
-  background-color: #fcddc7;
-}
-@media (max-width: 500px) {
-  .aboutUsHeader img {
-    width: 100%;
-    padding-top: 20%;
-  }
-}
-.aboutUsHeader p {
-  padding: 10% 0 10% 0;
-  font-size: 3rem;
-  text-align: center;
-}
-@media (max-width: 500px) {
-  .aboutUsHeader p {
-    font-size: 1.4rem;
-  }
-}
-.meetOurTeam {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid #fcddc7;
-  background-color: #fcddc7;
-}
-.meetOurTeam .teamShowcase {
-  display: flex;
-  flex-direction: column;
-}
-.meetOurTeam .teamShowcase .topHalfTeam {
-  display: flex;
-  padding-bottom: 5%;
-  justify-content: space-evenly;
-}
-@media (max-width: 500px) {
-  .meetOurTeam .teamShowcase .topHalfTeam {
-    flex-direction: column;
-    padding: 0 5% 0 5%;
-  }
-}
-.meetOurTeam .teamShowcase .topHalfTeam .teamMember {
-  display: flex;
-  border: solid #10613c;
-  background-color: #10613c;
-  border-radius: 10%;
-  max-width: 30%;
-}
-@media (max-width: 500px) {
-  .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
-    min-width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-.meetOurTeam .teamShowcase .topHalfTeam .teamMember img {
-  border-radius: 100%;
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info {
-  text-align: center;
-  max-width: 33%;
-}
-.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info p {
-  padding: 3%;
-  color: white;
-  font-size: 1rem;
-}
-.meetOurTeam .teamShowcase .bottomHalfTeam {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-@media (max-width: 500px) {
-  .meetOurTeam .teamShowcase .bottomHalfTeam {
-    flex-direction: column;
-    padding: 0 5% 0 5%;
-  }
-}
-.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
-  display: flex;
-  border: solid #10613c;
-  background-color: #10613c;
-  border-radius: 10%;
-  max-width: 30%;
-}
-@media (max-width: 500px) {
-  .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
-    min-width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember img {
-  border-radius: 100%;
-  padding-bottom: 5%;
-}
-.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info {
-  text-align: center;
-  max-width: 33%;
-}
-.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info p {
-  padding: 3%;
-  color: white;
-  font-size: 1rem;
-}
-.meetOurTeam h2 {
-  color: #10613c;
-  padding: 4% 0 8% 0;
-}
-.ourCoreValues {
-  display: flex;
-  padding: 10% 0 10% 0;
-}
-.ourCoreValues .buildLearnGrow {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .buildLearnGrow {
-    width: 100%;
-    justify-content: center;
-  }
-}
-.ourCoreValues .buildLearnGrow .coreValue {
-  display: flex;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .buildLearnGrow .coreValue {
-    width: 100%;
-    flex-direction: row;
-  }
-  .ourCoreValues .buildLearnGrow .coreValue img {
-    padding: 0 0 0 0%;
-  }
-}
-.ourCoreValues .buildLearnGrow .coreValue img {
-  padding-right: 8%;
-}
-.ourCoreValues .buildLearnGrow .coreValue .valueInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-}
-.ourCoreValues .buildLearnGrow .coreValue .valueInfo h4 {
-  padding-bottom: 5%;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .buildLearnGrow .coreValue .valueInfo {
-    width: 100%;
-    padding: 8% 0 0 0;
-  }
-  .ourCoreValues .buildLearnGrow .coreValue .valueInfo p {
-    font-size: 1rem;
-    padding: 0% 5% 0 0;
-    text-align: center;
-  }
-}
-.ourCoreValues .buildLearnGrow h2 {
-  padding-bottom: 10%;
-  color: #10613c;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .buildLearnGrow .learnValue {
-    padding: 5% 0 0 0;
-  }
-}
-.ourCoreValues .coreValuesImg {
-  width: 50%;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .coreValuesImg {
-    width: 0%;
-  }
-}
-.ourCoreValues .coreValuesImg img {
-  max-width: 100%;
-  max-height: 100%;
-}
-@media (max-width: 500px) {
-  .ourCoreValues .coreValuesImg img {
-    display: none;
-    max-width: 0%;
-    max-height: 0%;
-  }
-}
 .bordermixin {
   border: 1px red solid;
 }
@@ -1237,4 +1027,215 @@ header .date-weather {
   margin-left: 2.2rem;
   margin-right: 2.2rem;
   padding-top: 4.2rem;
+}
+@media (max-width: 500px) {
+  body {
+    max-width: 100%;
+    background-color: red;
+  }
+}
+.aboutUsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .aboutUsHeader {
+    max-width: 100%;
+  }
+  .aboutUsHeader img {
+    width: 350px;
+  }
+}
+.aboutUsHeader img {
+  padding-top: 8%;
+  max-width: 100%;
+  background-color: #fcddc7;
+}
+@media (max-width: 500px) {
+  .aboutUsHeader img {
+    width: 100%;
+    padding-top: 20%;
+  }
+}
+.aboutUsHeader p {
+  padding: 10% 0 10% 0;
+  font-size: 3rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .aboutUsHeader p {
+    font-size: 1.4rem;
+  }
+}
+.meetOurTeam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid #fcddc7;
+  background-color: #fcddc7;
+}
+.meetOurTeam .teamShowcase {
+  display: flex;
+  flex-direction: column;
+}
+.meetOurTeam .teamShowcase .topHalfTeam {
+  display: flex;
+  padding-bottom: 5%;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .topHalfTeam {
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+  }
+}
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember {
+  display: flex;
+  border: solid #10613c;
+  background-color: #10613c;
+  border-radius: 10%;
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .topHalfTeam .teamMember {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember img {
+  border-radius: 100%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info {
+  text-align: center;
+  max-width: 33%;
+}
+.meetOurTeam .teamShowcase .topHalfTeam .teamMember .info p {
+  padding: 3%;
+  color: white;
+  font-size: 1rem;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .bottomHalfTeam {
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+  }
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
+  display: flex;
+  border: solid #10613c;
+  background-color: #10613c;
+  border-radius: 10%;
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .meetOurTeam .teamShowcase .bottomHalfTeam .teamMember {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember img {
+  border-radius: 100%;
+  padding-bottom: 5%;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info {
+  text-align: center;
+  max-width: 33%;
+}
+.meetOurTeam .teamShowcase .bottomHalfTeam .teamMember .info p {
+  padding: 3%;
+  color: white;
+  font-size: 1rem;
+}
+.meetOurTeam h2 {
+  color: #10613c;
+  padding: 4% 0 8% 0;
+}
+.ourCoreValues {
+  display: flex;
+  padding: 10% 0 10% 0;
+}
+.ourCoreValues .buildLearnGrow {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .buildLearnGrow {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.ourCoreValues .buildLearnGrow .coreValue {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .buildLearnGrow .coreValue {
+    width: 100%;
+    flex-direction: row;
+  }
+  .ourCoreValues .buildLearnGrow .coreValue img {
+    padding: 0 0 0 0%;
+  }
+}
+.ourCoreValues .buildLearnGrow .coreValue img {
+  padding-right: 8%;
+}
+.ourCoreValues .buildLearnGrow .coreValue .valueInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.ourCoreValues .buildLearnGrow .coreValue .valueInfo h4 {
+  padding-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .buildLearnGrow .coreValue .valueInfo {
+    width: 100%;
+    padding: 8% 0 0 0;
+  }
+  .ourCoreValues .buildLearnGrow .coreValue .valueInfo p {
+    font-size: 1rem;
+    padding: 0% 5% 0 0;
+    text-align: center;
+  }
+}
+.ourCoreValues .buildLearnGrow h2 {
+  padding-bottom: 10%;
+  color: #10613c;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .buildLearnGrow .learnValue {
+    padding: 5% 0 0 0;
+  }
+}
+.ourCoreValues .coreValuesImg {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .coreValuesImg {
+    width: 0%;
+  }
+}
+.ourCoreValues .coreValuesImg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 500px) {
+  .ourCoreValues .coreValuesImg img {
+    display: none;
+    max-width: 0%;
+    max-height: 0%;
+  }
 }
