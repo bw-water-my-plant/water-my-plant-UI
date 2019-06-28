@@ -355,6 +355,12 @@ header .date-weather {
   line-height: 1.8rem;
   margin: 1rem 0;
 }
+.main-news-container .modal-content .modal-body a {
+  color: #1ba364;
+}
+.main-news-container .modal-content .modal-body h3 {
+  font-weight: bold;
+}
 .main-news-container .modal-content .modal-body img {
   max-height: 30rem;
   object-fit: cover;

@@ -1,6 +1,6 @@
 /* --------------------------------- ANIMATIONS ------------------------------------ */
 // animate the menu
-
+console.log(Date.now)
 const animMenu = document.querySelectorAll('.tab')
 console.log(animMenu)
 
@@ -11,43 +11,54 @@ TweenMax.fromTo(animMenu, 1, {x:50}, {x:0});
 
 /* --------------------------------- MODAL CONTENT ------------------------------------ */
 
-// an IIFE, which runs this function automatically and protects it from being accessed by other things
-(function iife() {
-  // use strict does ots of thing, such as preventing access to global vars unless explicitly defined
-  "use strict";
-  function closestEl(el, selector) {
-      var doc = el.document || el.ownerDocument;
-      var matches = doc.querySelectorAll(selector);
-      var i;
-      while (el) {
-          i = matches.length - 1;
-          while (i >= 0) {
-              if (matches.item(i) === el) {
-                  return el;
+
+(function iife() { // an IIFE, which runs this function automatically and protects it from being accessed by other things
+  
+  "use strict"; // use strict does lots of things, such as preventing access to global vars unless explicitly defined
+  
+  function closestEl(el, selector) { // beginning of the function to be invoked
+    
+      var doc = el.document || el.ownerDocument; //collecting the document in two ways (seems redundant to me?)
+      console.log("document ", el.document)
+      console.log("ownerdoc ", el.ownerDocument)
+      
+      var matches = doc.querySelectorAll(selector); // collecting items in the doc variable just defined. these items will match whatever is passed in via the 'selector' parameter
+      
+      var i; // making 'i' exist as a variable
+      
+      while (el) { // a while loop. runs while a thing is true.
+          i = matches.length - 1; // i = the length of the nodelist containing query matches
+          while (i >= 0) { // while there are still items in nodelist remaining
+              if (matches.item(i) === el) { // if item in nodelist at that index position is exactly equal to the element...
+                  return el; // ...return that element? can you do bracket notation w parentheses?
               }
-              i -= 1;
+              i -= 1; // reduce the list of matches by one
           }
-          el = el.parentElement;
+          el = el.parentElement; // take the element returned in the nested while loop and define the element as its parent element
       }
-      return el;
+      return el; // return the parent element collected above. This parent element is used in the closeModal function below, where it can be set to display:none.
   }
-  var modalBtns = document.querySelectorAll(".myBtn");
-  modalBtns.forEach(function addBtnClickEvent(btn) {
-      btn.onclick = function showModal() {
-          var modal = btn.getAttribute("data-modal");
-          document.getElementById(modal).style.display = "block";
+
+  var modalBtns = document.querySelectorAll(".myBtn"); // collect all elements classed as modal buttons
+  modalBtns.forEach(function addBtnClickEvent(btn) { // adds click events to all modal buttons
+      btn.onclick = function showModal() { // when clicked, do function
+          var modal = btn.getAttribute("data-modal"); // collect the data key for each button in 'modal'. happens once per button passed in
+          document.getElementById(modal).style.display = "block"; // display elements that match value stored in 'modal'. This only opens ONE element because only one element will have the #id that matches modal. You need the data key value and ID name to exactly match for this to work.
       };
   });
-
+  // collecting all the close buttons
   var closeBtns = document.querySelectorAll(".close");
+  // run them all through forEach to add a close event to close window
   closeBtns.forEach(function addCloseClickEvent(btn) {
+    // at click, run closeModal function
       btn.onclick = function closeModal() {
+        // defines modal as the result of running closestEl with the button being pressed (btn) and the class "modal". in effect this matches the modal to close with the close button press.
           var modal = closestEl(btn, ".modal");
           modal.style.display = "none";
       };
   });
-
-  window.onclick = function closeOnClick(event) {
+  
+  window.onclick = function closeOnClick(event) { // turns off the modal if you click outside the modal content box anywhere in the window (aka on the modal dark background) 
       if (event.target.className === "modal") {
           event.target.style.display = "none";
       }
